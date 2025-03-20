@@ -1,5 +1,5 @@
 This file is a merged representation of a subset of the codebase, containing specifically included files and files not matching ignore patterns, combined into a single document by Repomix.
-The content has been processed where empty lines have been removed, content has been compressed (code blocks are separated by ⋮---- delimiter).
+The content has been processed where comments have been removed, empty lines have been removed, content has been formatted for parsing in markdown style, content has been compressed (code blocks are separated by ⋮---- delimiter).
 
 # File Summary
 
@@ -28,11 +28,13 @@ The content is organized as follows:
 ## Notes
 - Some files may have been excluded based on .gitignore rules and Repomix's configuration
 - Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
-- Only files matching these patterns are included: aider/website/docs/**/*.md, aider/website/docs/**/*.rst, aider/website/docs/**/*.txt, **/README.md, **/CHANGELOG.md, **/CONTRIBUTING.md
-- Files matching these patterns are excluded: **/*.svg, **/*.jpg, **/*.jpeg, **/*.png, **/*.gif, **/LICENSE*, **/node_modules/**, **/venv/**, **/.git/**, **/tests/**, **/test/**, **/*_test.py, **/*_tests.py, **/test_*.py, aider/website/**/*.html, aider/website/**/*.yml, aider/website/**/*.json, aider/website/**/*.css, aider/website/**/*.js, aider/website/**/*.scss, aider/website/**/*.ps1, aider/website/**/*.sh, aider/website/_*, aider/website/assets/**, aider/website/blog/**, aider/website/_posts/**, aider/website/_sass/**, aider/website/_includes/**, aider/website/_layouts/**, aider/website/_data/**, aider/website/examples/**, aider/website/share/**, **/HISTORY.md
+- Only files matching these patterns are included: usage.md, install.md, config.md, faq.md, git.md, llms.md, languages.md, usage/**/*.md, troubleshooting/**/*.md, config/**/*.md, install/**/*.md, llms/**/*.md, ../../README.md, ../../CHANGELOG.md, ../../CONTRIBUTING.md
+- Files matching these patterns are excluded: **/*.svg, **/*.jpg, **/*.jpeg, **/*.png, **/*.gif, **/LICENSE*, **/node_modules/**, **/venv/**, **/.git/**, **/tests/**, **/test/**, **/*_test.py, **/*_tests.py, **/test_*.py, ../**/*.html, ../**/*.yml, ../**/*.json, ../**/*.css, ../**/*.js, ../**/*.scss, ../**/*.ps1, ../**/*.sh, ../_*, ../assets/**, ../blog/**, ../_posts/**, ../_sass/**, ../_includes/**, ../_layouts/**, ../_data/**, ../examples/**, ../share/**, recordings/**, leaderboards/**, legal/**, more/**, repomap.md, scripting.md, unified-diffs.md, benchmarks*.md, ctags.md, more-info.md, **/HISTORY.md
 - Files matching patterns in .gitignore are excluded
 - Files matching default ignore patterns are excluded
+- Code comments have been removed from supported file types
 - Empty lines have been removed from all files
+- Content has been formatted for parsing in markdown style
 - Content has been compressed - code blocks are separated by ⋮---- delimiter
 - Files are sorted by Git change count (files with more changes are at the bottom)
 
@@ -40,151 +42,72 @@ The content is organized as follows:
 
 # Directory Structure
 ```
-aider/
-  queries/
-    tree-sitter-language-pack/
-      README.md
-    tree-sitter-languages/
-      README.md
-  website/
-    docs/
-      config/
-        adv-model-settings.md
-        aider_conf.md
-        api-keys.md
-        dotenv.md
-        editor.md
-        model-aliases.md
-        options.md
-        reasoning.md
-      install/
-        codespaces.md
-        docker.md
-        optional.md
-        replit.md
-      leaderboards/
-        by-release-date.md
-        contrib.md
-        edit.md
-        index.md
-        notes.md
-        refactor.md
-      legal/
-        contributor-agreement.md
-        privacy.md
-      llms/
-        anthropic.md
-        azure.md
-        bedrock.md
-        cohere.md
-        deepseek.md
-        gemini.md
-        groq.md
-        lm-studio.md
-        ollama.md
-        openai-compat.md
-        openai.md
-        openrouter.md
-        other.md
-        vertex.md
-        warnings.md
-        xai.md
-      more/
-        analytics.md
-        edit-formats.md
-        infinite-output.md
-      recordings/
-        auto-accept-architect.md
-        dont-drop-original-read-files.md
-        index.md
-        model-accepts-settings.md
-        tree-sitter-language-pack.md
-      troubleshooting/
-        aider-not-found.md
-        edit-errors.md
-        imports.md
-        models-and-keys.md
-        support.md
-        token-limits.md
-        warnings.md
-      usage/
-        browser.md
-        caching.md
-        commands.md
-        conventions.md
-        copypaste.md
-        images-urls.md
-        lint-test.md
-        modes.md
-        not-code.md
-        notifications.md
-        tips.md
-        tutorials.md
-        voice.md
-        watch.md
-      benchmarks-0125.md
-      benchmarks-1106.md
-      benchmarks-speed-1106.md
-      benchmarks.md
-      config.md
-      ctags.md
-      faq.md
-      git.md
-      install.md
-      languages.md
-      llms.md
-      more-info.md
-      repomap.md
-      scripting.md
-      troubleshooting.md
-      unified-diffs.md
-      usage.md
-benchmark/
-  README.md
-CONTRIBUTING.md
-README.md
+config/
+  adv-model-settings.md
+  aider_conf.md
+  api-keys.md
+  dotenv.md
+  editor.md
+  model-aliases.md
+  options.md
+  reasoning.md
+install/
+  codespaces.md
+  docker.md
+  optional.md
+  replit.md
+llms/
+  anthropic.md
+  azure.md
+  bedrock.md
+  cohere.md
+  deepseek.md
+  gemini.md
+  groq.md
+  lm-studio.md
+  ollama.md
+  openai-compat.md
+  openai.md
+  openrouter.md
+  other.md
+  vertex.md
+  warnings.md
+  xai.md
+troubleshooting/
+  aider-not-found.md
+  edit-errors.md
+  imports.md
+  models-and-keys.md
+  support.md
+  token-limits.md
+  warnings.md
+usage/
+  browser.md
+  caching.md
+  commands.md
+  conventions.md
+  copypaste.md
+  images-urls.md
+  lint-test.md
+  modes.md
+  not-code.md
+  notifications.md
+  tips.md
+  tutorials.md
+  voice.md
+  watch.md
+config.md
+faq.md
+git.md
+install.md
+languages.md
+llms.md
+usage.md
 ```
 
 # Files
 
-## File: aider/queries/tree-sitter-language-pack/README.md
-`````markdown
-These scm files are all adapted from the github repositories listed here:
-
-https://github.com/Goldziher/tree-sitter-language-pack/blob/main/sources/language_definitions.json
-
-See this URL for information on the licenses of each repo:
-
-https://github.com/Goldziher/tree-sitter-language-pack/
-`````
-
-## File: aider/queries/tree-sitter-languages/README.md
-`````markdown
-# Credits
-
-Aider uses modified versions of the tags.scm files from these open source 
-tree-sitter language implementations:
-
-* [https://github.com/tree-sitter/tree-sitter-c](https://github.com/tree-sitter/tree-sitter-c) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-c-sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-cpp](https://github.com/tree-sitter/tree-sitter-cpp) — licensed under the MIT License.
-* [https://github.com/Wilfred/tree-sitter-elisp](https://github.com/Wilfred/tree-sitter-elisp) — licensed under the MIT License.
-* [https://github.com/elixir-lang/tree-sitter-elixir](https://github.com/elixir-lang/tree-sitter-elixir) — licensed under the Apache License, Version 2.0.
-* [https://github.com/elm-tooling/tree-sitter-elm](https://github.com/elm-tooling/tree-sitter-elm) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-go](https://github.com/tree-sitter/tree-sitter-go) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-java](https://github.com/tree-sitter/tree-sitter-java) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-javascript](https://github.com/tree-sitter/tree-sitter-javascript) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-ocaml](https://github.com/tree-sitter/tree-sitter-ocaml) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-php](https://github.com/tree-sitter/tree-sitter-php) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-python](https://github.com/tree-sitter/tree-sitter-python) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-ql](https://github.com/tree-sitter/tree-sitter-ql) — licensed under the MIT License.
-* [https://github.com/r-lib/tree-sitter-r](https://github.com/r-lib/tree-sitter-r) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-ruby](https://github.com/tree-sitter/tree-sitter-ruby) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-rust](https://github.com/tree-sitter/tree-sitter-rust) — licensed under the MIT License.
-* [https://github.com/tree-sitter/tree-sitter-typescript](https://github.com/tree-sitter/tree-sitter-typescript) — licensed under the MIT License.
-`````
-
-## File: aider/website/docs/config/adv-model-settings.md
+## File: config/adv-model-settings.md
 `````markdown
 ---
 parent: Configuration
@@ -1308,7 +1231,7 @@ cog.out("```\n")
 <!--[[[end]]]-->
 `````
 
-## File: aider/website/docs/config/aider_conf.md
+## File: config/aider_conf.md
 `````markdown
 ---
 parent: Configuration
@@ -1824,7 +1747,7 @@ cog.outl("```")
 <!--[[[end]]]-->
 `````
 
-## File: aider/website/docs/config/api-keys.md
+## File: config/api-keys.md
 `````markdown
 ---
 parent: Configuration
@@ -1917,7 +1840,7 @@ api-key:
 ```
 `````
 
-## File: aider/website/docs/config/dotenv.md
+## File: config/dotenv.md
 `````markdown
 ---
 parent: Configuration
@@ -2387,7 +2310,7 @@ cog.outl("```")
 <!--[[[end]]]-->
 `````
 
-## File: aider/website/docs/config/editor.md
+## File: config/editor.md
 `````markdown
 ---
 parent: Configuration
@@ -2518,7 +2441,7 @@ If you encounter issues with your editor not blocking (returning to the prompt i
    ```
 `````
 
-## File: aider/website/docs/config/model-aliases.md
+## File: config/model-aliases.md
 `````markdown
 ---
 parent: Configuration
@@ -2619,7 +2542,7 @@ If the same alias is defined in multiple places, the priority is:
 This allows you to override built-in aliases with your own preferences.
 `````
 
-## File: aider/website/docs/config/options.md
+## File: config/options.md
 `````markdown
 ---
 parent: Configuration
@@ -3435,7 +3358,7 @@ Environment variable: `AIDER_O1_PREVIEW`
 <!--[[[end]]]-->
 `````
 
-## File: aider/website/docs/config/reasoning.md
+## File: config/reasoning.md
 `````markdown
 ---
 parent: Configuration
@@ -3625,7 +3548,7 @@ settings for a different provider.
 ```
 `````
 
-## File: aider/website/docs/install/codespaces.md
+## File: install/codespaces.md
 `````markdown
 ---
 title: GitHub Codespaces
@@ -3667,7 +3590,7 @@ inside your codespace terminal.
 </style>
 `````
 
-## File: aider/website/docs/install/docker.md
+## File: install/docker.md
 `````markdown
 ---
 parent: Installation
@@ -3728,7 +3651,7 @@ git config user.name "Your Name"
 - The `/voice` command won't work unless you can figure out how to give the docker container access to your host audio device. The container has libportaudio2 installed, so it should work if you can do that.
 `````
 
-## File: aider/website/docs/install/optional.md
+## File: install/optional.md
 `````markdown
 ---
 parent: Installation
@@ -3830,7 +3753,7 @@ please let us know by opening a
 [GitHub issue](https://github.com/Aider-AI/aider/issues).
 `````
 
-## File: aider/website/docs/install/replit.md
+## File: install/replit.md
 `````markdown
 ---
 parent: Installation
@@ -3842,652 +3765,7 @@ nav_order: 900
 {% include replit-pipx.md %}
 `````
 
-## File: aider/website/docs/leaderboards/by-release-date.md
-`````markdown
----
-title: Scores by release date
-parent: Aider LLM Leaderboards
-nav_order: 200
----
-
-## LLM code editing skill by model release date
-
-[![connecting to many LLMs](/assets/models-over-time.svg)](https://aider.chat/assets/models-over-time.svg)
-`````
-
-## File: aider/website/docs/leaderboards/contrib.md
-`````markdown
----
-parent: Aider LLM Leaderboards
-nav_order: 900
----
-
-# Contributing results
-
-Contributions of benchmark results are welcome!
-See the
-[benchmark README](https://github.com/Aider-AI/aider/blob/main/benchmark/README.md)
-for information on running aider's code editing benchmarks.
-Submit results by opening a PR with edits to the
-[benchmark results data files](https://github.com/Aider-AI/aider/blob/main/aider/website/_data/).
-`````
-
-## File: aider/website/docs/leaderboards/edit.md
-`````markdown
----
-parent: Aider LLM Leaderboards
-highlight_image: /assets/leaderboard.jpg
-nav_order: 50
-description: Quantitative benchmark of basic LLM code editing skill.
----
-
-# Code editing leaderboard
-
-
-{: .note :}
-This old
-[aider code editing leaderboard](edit.html)
-has been replaced by the
-new, much more challenging
-[polyglot leaderboard](/docs/leaderboards/).
-
-[Aider's code editing benchmark](/docs/benchmarks.html#the-benchmark) asks the LLM to edit python source files to complete 133 small coding exercises
-from Exercism. 
-This measures the LLM's coding ability, and whether it can
-write new code that integrates into existing code.
-The model also has to successfully apply all its changes to the source file without human intervention.
-
-<input type="text" id="editSearchInput" placeholder="Search..." style="width: 100%; max-width: 800px; margin: 10px auto; padding: 8px; display: block; border: 1px solid #ddd; border-radius: 4px;">
-
-<table style="width: 100%; max-width: 800px; margin: auto; border-collapse: collapse; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 14px;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th style="padding: 8px; text-align: left;">Model</th>
-      <th style="padding: 8px; text-align: center;">Percent completed correctly</th>
-      <th style="padding: 8px; text-align: center;">Percent using correct edit format</th>
-      <th style="padding: 8px; text-align: left;">Command</th>
-      <th style="padding: 8px; text-align: center;">Edit format</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign edit_sorted = site.data.edit_leaderboard | sort: 'pass_rate_2' | reverse %}
-    {% for row in edit_sorted %}
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">{{ row.model }}</td>
-        <td style="padding: 8px; text-align: center;">{{ row.pass_rate_2 }}%</td>
-        <td style="padding: 8px; text-align: center;">{{ row.percent_cases_well_formed }}%</td>
-        <td style="padding: 8px;"><code>{{ row.command }}</code></td>
-        <td style="padding: 8px; text-align: center;">{{ row.edit_format }}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-<canvas id="editChart" width="800" height="450" style="margin-top: 20px"></canvas>
-<script src="https://unpkg.com/patternomaly/dist/patternomaly.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-{% assign data_source = edit_sorted %}
-{% assign pass_rate_field = "pass_rate_2" %}
-{% include leaderboard.js %}
-</script>
-<style>
-  tr.selected {
-    color: #0056b3;
-  }
-  table {
-    table-layout: fixed;
-  }
-  td, th {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  td:nth-child(3), td:nth-child(4) {
-    font-size: 12px;
-  }
-</style>
-
-
-## Notes on benchmarking results
-
-The key benchmarking results are:
-
-- **Percent completed correctly** - Measures what percentage of the coding tasks that the LLM completed successfully. To complete a task, the LLM must solve the programming assignment *and* edit the code to implement that solution.
-- **Percent using correct edit format** - Measures the percent of coding tasks where the LLM complied with the edit format specified in the system prompt. If the LLM makes edit mistakes, aider will give it feedback and ask for a fixed copy of the edit. The best models can reliably conform to the edit format, without making errors.
-
-
-## Notes on the edit format
-
-Aider uses different "edit formats" to collect code edits from different LLMs.
-The "whole" format is the easiest for an LLM to use, but it uses a lot of tokens
-and may limit how large a file can be edited.
-Models which can use one of the diff formats are much more efficient,
-using far fewer tokens.
-Models that use a diff-like format are able to 
-edit larger files with less cost and without hitting token limits.
-
-Aider is configured to use the best edit format for the popular OpenAI and Anthropic models
-and the [other models recommended on the LLM page](/docs/llms.html).
-For lesser known models aider will default to using the "whole" editing format
-since it is the easiest format for an LLM to use.
-
-## Contributing benchmark results
-
-Contributions of benchmark results are welcome!
-See the
-[benchmark README](https://github.com/Aider-AI/aider/blob/main/benchmark/README.md)
-for information on running aider's code editing benchmarks.
-Submit results by opening a PR with edits to the
-[benchmark results data files](https://github.com/Aider-AI/aider/blob/main/aider/website/_data/).
-
-
-<p class="post-date">
-By Paul Gauthier,
-last updated
-<!--[[[cog
-import subprocess
-import datetime
-
-files = [
-    'aider/website/docs/leaderboards/edit.md',
-    'aider/website/_data/edit_leaderboard.yml',
-]
-
-def get_last_modified_date(file):
-    result = subprocess.run(['git', 'log', '-1', '--format=%ct', file], capture_output=True, text=True)
-    if result.returncode == 0:
-        timestamp = int(result.stdout.strip())
-        return datetime.datetime.fromtimestamp(timestamp)
-    return datetime.datetime.min
-
-mod_dates = [get_last_modified_date(file) for file in files]
-latest_mod_date = max(mod_dates)
-cog.out(f"{latest_mod_date.strftime('%B %d, %Y.')}")
-]]]-->
-January 16, 2025.
-<!--[[[end]]]-->
-</p>
-`````
-
-## File: aider/website/docs/leaderboards/index.md
-`````markdown
----
-highlight_image: /assets/leaderboard.jpg
-nav_order: 950
-description: Quantitative benchmarks of LLM code editing skill.
-has_children: true
----
-
-
-# Aider LLM Leaderboards
-
-Aider works best with LLMs which are good at *editing* code, not just good at writing
-code.
-To evaluate an LLM's editing skill, aider uses benchmarks that
-assess a model's ability to consistently follow the system prompt
-to successfully edit code.
-
-The leaderboards report the results from a number of popular LLMs.
-While [aider can connect to almost any LLM](/docs/llms.html),
-it works best with models that score well on the benchmarks.
-
-
-## Polyglot leaderboard
-
-[Aider's polyglot benchmark](https://aider.chat/2024/12/21/polyglot.html#the-polyglot-benchmark) 
-asks the LLM to edit source files to complete 225 coding exercises
-from Exercism. 
-It contains exercises in many popular programming languages:
-C++, Go, Java, JavaScript, Python and Rust.
-The 225 exercises were purposely selected to be the *hardest*
-that Exercism offered in those languages, to provide
-a strong coding challenge to LLMs.
-
-This benchmark measures the LLM's coding ability in popular languages, 
-and whether it can
-write new code that integrates into existing code.
-The model also has to successfully apply all its changes to the source file without human intervention.
-
-<input type="text" id="editSearchInput" placeholder="Search..." style="width: 100%; max-width: 800px; margin: 10px auto; padding: 8px; display: block; border: 1px solid #ddd; border-radius: 4px;">
-
-<table style="width: 100%; max-width: 800px; margin: auto; border-collapse: collapse; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 14px;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th style="padding: 8px; text-align: left;">Model</th>
-      <th style="padding: 8px; text-align: center;">Percent correct</th>
-      <th style="padding: 8px; text-align: center;">Percent using correct edit format</th>
-      <th style="padding: 8px; text-align: left;">Command</th>
-      <th style="padding: 8px; text-align: center;">Edit format</th>
-      <th style="padding: 8px; text-align: center;">Cost</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign edit_sorted = site.data.polyglot_leaderboard | sort: 'pass_rate_2' | reverse %}
-    {% for row in edit_sorted %}
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">{{ row.model }}</td>
-        <td style="padding: 8px; text-align: center;">{{ row.pass_rate_2 }}%</td>
-        <td style="padding: 8px; text-align: center;">{{ row.percent_cases_well_formed }}%</td>
-        <td style="padding: 8px;"><code>{{ row.command }}</code></td>
-        <td style="padding: 8px; text-align: center;">{{ row.edit_format }}</td>
-        <td style="padding: 8px; text-align: center;">{% if row.total_cost == 0 %}?{% else %}${{ row.total_cost | times: 1.0 | round: 2 }}{% endif %}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-### Aider polyglot benchmark results
-
-<canvas id="editChart" width="800" height="450" style="margin-top: 20px"></canvas>
-<script src="https://unpkg.com/patternomaly/dist/patternomaly.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-{% assign data_source = edit_sorted %}
-{% assign pass_rate_field = "pass_rate_2" %}
-{% assign highlight_model = "xxxxxx" %}
-{% include leaderboard.js %}
-</script>
-<style>
-  tr.selected {
-    color: #0056b3;
-  }
-  table {
-    table-layout: fixed;
-  }
-  td, th {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  td:nth-child(3), td:nth-child(4) {
-    font-size: 12px;
-  }
-  
-  /* Hide command and edit format columns on mobile */
-  @media screen and (max-width: 767px) {
-    th:nth-child(4), td:nth-child(4), /* Command column */
-    th:nth-child(5), td:nth-child(5) { /* Edit format column */
-      display: none;
-    }
-  }
-</style>
-
-
-
-
-<p class="post-date">
-By Paul Gauthier,
-last updated
-<!--[[[cog
-import subprocess
-import datetime
-
-files = [
-    'aider/website/docs/leaderboards/index.md',
-    'aider/website/_data/polyglot_leaderboard.yml',
-]
-
-def get_last_modified_date(file):
-    result = subprocess.run(['git', 'log', '-1', '--format=%ct', file], capture_output=True, text=True)
-    if result.returncode == 0:
-        timestamp = int(result.stdout.strip())
-        return datetime.datetime.fromtimestamp(timestamp)
-    return datetime.datetime.min
-
-mod_dates = [get_last_modified_date(file) for file in files]
-latest_mod_date = max(mod_dates)
-cog.out(f"{latest_mod_date.strftime('%B %d, %Y.')}")
-]]]-->
-March 17, 2025.
-<!--[[[end]]]-->
-</p>
-`````
-
-## File: aider/website/docs/leaderboards/notes.md
-`````markdown
----
-parent: Aider LLM Leaderboards
-nav_order: 800
----
-
-# Benchmark notes
-
-## Notes on pricing
-
-All pricing information is the cost to run the benchmark at the time it was
-run.
-Providers change their pricing, and every benchmark run ends up with a slightly
-different cost.
-Pricing is provided on a *best efforts* basis, and may not always be current
-or fully accurate.
-
-## Notes on benchmarking results
-
-The key benchmarking results are:
-
-- **Percent completed correctly** - Measures what percentage of the coding tasks that the LLM completed successfully. To complete a task, the LLM must solve the programming assignment *and* edit the code to implement that solution.
-- **Percent using correct edit format** - Measures the percent of coding tasks where the LLM complied with the edit format specified in the system prompt. If the LLM makes edit mistakes, aider will give it feedback and ask for a fixed copy of the edit. The best models can reliably conform to the edit format, without making errors.
-
-
-## Notes on the edit format
-
-Aider uses different "edit formats" to collect code edits from different LLMs.
-The "whole" format is the easiest for an LLM to use, but it uses a lot of tokens
-and may limit how large a file can be edited.
-Models which can use one of the diff formats are much more efficient,
-using far fewer tokens.
-Models that use a diff-like format are able to 
-edit larger files with less cost and without hitting token limits.
-
-Aider is configured to use the best edit format for the popular OpenAI and Anthropic models
-and the [other models recommended on the LLM page](/docs/llms.html).
-For lesser known models aider will default to using the "whole" editing format
-since it is the easiest format for an LLM to use.
-`````
-
-## File: aider/website/docs/leaderboards/refactor.md
-`````markdown
----
-parent: Aider LLM Leaderboards
-highlight_image: /assets/leaderboard.jpg
-nav_order: 100
-description: Quantitative benchmark of LLM code refactoring skill.
----
-
-
-## Refactoring leaderboard
-
-[Aider's refactoring benchmark](https://github.com/Aider-AI/refactor-benchmark) asks the LLM to refactor 89 large methods from large python classes. This is a more challenging benchmark, which tests the model's ability to output long chunks of code without skipping sections or making mistakes. It was developed to provoke and measure [GPT-4 Turbo's "lazy coding" habit](/2023/12/21/unified-diffs.html).
-
-The refactoring benchmark requires a large context window to
-work with large source files.
-Therefore, results are available for fewer models.
-
-<input type="text" id="editSearchInput" placeholder="Search..." style="width: 100%; max-width: 800px; margin: 10px auto; padding: 8px; display: block; border: 1px solid #ddd; border-radius: 4px;">
-
-<table style="width: 100%; max-width: 800px; margin: auto; border-collapse: collapse; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 14px;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th style="padding: 8px; text-align: left;">Model</th>
-      <th style="padding: 8px; text-align: center;">Percent completed correctly</th>
-      <th style="padding: 8px; text-align: center;">Percent using correct edit format</th>
-      <th style="padding: 8px; text-align: left;">Command</th>
-      <th style="padding: 8px; text-align: center;">Edit format</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign refac_sorted = site.data.refactor_leaderboard | sort: 'pass_rate_1' | reverse %}
-    {% for row in refac_sorted %}
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">{{ row.model }}</td>
-        <td style="padding: 8px; text-align: center;">{{ row.pass_rate_1 }}%</td>
-        <td style="padding: 8px; text-align: center;">{{ row.percent_cases_well_formed }}%</td>
-        <td style="padding: 8px;"><code>{{ row.command }}</code></td>
-        <td style="padding: 8px; text-align: center;">{{ row.edit_format }}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-<canvas id="editChart" width="800" height="450" style="margin-top: 20px"></canvas>
-<script src="https://unpkg.com/patternomaly/dist/patternomaly.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-{% assign data_source = refac_sorted %}
-{% assign pass_rate_field = "pass_rate_1" %}
-{% include leaderboard.js %}
-</script>
-
-
-<p class="post-date">
-By Paul Gauthier,
-last updated
-<!--[[[cog
-import subprocess
-import datetime
-
-files = [
-    'aider/website/docs/leaderboards/refactor.md',
-    'aider/website/_data/refactor_leaderboard.yml',
-]
-
-def get_last_modified_date(file):
-    result = subprocess.run(['git', 'log', '-1', '--format=%ct', file], capture_output=True, text=True)
-    if result.returncode == 0:
-        timestamp = int(result.stdout.strip())
-        return datetime.datetime.fromtimestamp(timestamp)
-    return datetime.datetime.min
-
-mod_dates = [get_last_modified_date(file) for file in files]
-latest_mod_date = max(mod_dates)
-cog.out(f"{latest_mod_date.strftime('%B %d, %Y.')}")
-]]]-->
-January 16, 2025.
-<!--[[[end]]]-->
-</p>
-`````
-
-## File: aider/website/docs/legal/contributor-agreement.md
-`````markdown
-Individual Contributor License Agreement
-
-Thank you for your interest in Aider AI LLC ("Aider AI").
-To clarify the intellectual property license
-granted with Contributions from any person or entity, Aider AI
-must have on file a signed Contributor License Agreement ("CLA")
-from each Contributor, indicating agreement with the license
-terms below. This agreement is for your protection as a Contributor
-as well as the protection of Aider AI and its users. It does not
-change your rights to use your own Contributions for any other purpose.
-
-Please complete and sign this Agreement. Read this document carefully
-before signing and keep a copy for your records.
-
-You accept and agree to the following terms and conditions for Your
-Contributions (present and future) that you submit to Aider AI.
-Except for the license granted herein to Aider AI and recipients
-of software distributed by Aider AI, You reserve all right, title,
-and interest in and to Your Contributions.
-
-1. Definitions.
-
-    "You" (or "Your") shall mean the copyright owner or legal entity
-    authorized by the copyright owner that is making this Agreement
-    with Aider AI. For legal entities, the entity making a
-    Contribution and all other entities that control, are controlled
-    by, or are under common control with that entity are considered to
-    be a single Contributor. For the purposes of this definition,
-    "control" means (i) the power, direct or indirect, to cause the
-    direction or management of such entity, whether by contract or
-    otherwise, or (ii) ownership of fifty percent (50%) or more of the
-    outstanding shares, or (iii) beneficial ownership of such entity.
-   
-    "Contribution" shall mean any original work of authorship,
-    including any modifications or additions to an existing work, that
-    is intentionally submitted by You to Aider AI for inclusion
-    in, or documentation of, any of the products owned or managed by
-    Aider AI (the "Work"). For the purposes of this definition,
-    "submitted" means any form of electronic, verbal, or written
-    communication sent to Aider AI or its representatives,   
-    including but not limited to communication on electronic mailing
-    lists, source code control systems, and issue tracking systems that
-    are managed by, or on behalf of, Aider AI for the purpose of
-    discussing and improving the Work, but excluding communication that
-    is conspicuously marked or otherwise designated in writing by You
-    as "Not a Contribution."
-   
-2. Grant of Copyright License. Subject to the terms and conditions of
-   this Agreement, You hereby grant to Aider AI and to
-   recipients of software distributed by Aider AI a perpetual,
-   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-   copyright license to reproduce, prepare derivative works of,
-   publicly display, publicly perform, sublicense, and distribute Your
-   Contributions and such derivative works.
-   
-3. Grant of Patent License. Subject to the terms and conditions of
-   this Agreement, You hereby grant to Aider AI and to
-   recipients of software distributed by Aider AI a perpetual,
-   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-   (except as stated in this section) patent license to make, have
-   made, use, offer to sell, sell, import, and otherwise transfer the
-   Work, where such license applies only to those patent claims
-   licensable by You that are necessarily infringed by Your
-   Contribution(s) alone or by combination of Your Contribution(s)
-   with the Work to which such Contribution(s) was submitted. If any
-   entity institutes patent litigation against You or any other entity
-   (including a cross-claim or counterclaim in a lawsuit) alleging
-   that your Contribution, or the Work to which you have contributed,
-   constitutes direct or contributory patent infringement, then any
-   patent licenses granted to that entity under this Agreement for
-   that Contribution or Work shall terminate as of the date such
-   litigation is filed.
-   
-4. You represent that you are legally entitled to grant the above
-   license. If your employer(s) has rights to intellectual property
-   that you create that includes your Contributions, you represent
-   that you have received permission to make Contributions on behalf
-   of that employer, that your employer has waived such rights for
-   your Contributions to Aider AI, or that your employer has
-   executed a separate Corporate CLA with Aider AI.
-   
-5. You represent that each of Your Contributions is Your original
-   creation (see section 7 for submissions on behalf of others).  You
-   represent that Your Contribution submissions include complete
-   details of any third-party license or other restriction (including,
-   but not limited to, related patents and trademarks) of which you
-   are personally aware and which are associated with any part of Your
-   Contributions.
-   
-6. You are not expected to provide support for Your Contributions,
-   except to the extent You desire to provide support. You may provide
-   support for free, for a fee, or not at all. Unless required by
-   applicable law or agreed to in writing, You provide Your
-   Contributions on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
-   OF ANY KIND, either express or implied, including, without
-   limitation, any warranties or conditions of TITLE, NON-
-   INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
-   
-7. Should You wish to submit work that is not Your original creation,
-   You may submit it to Aider AI separately from any
-   Contribution, identifying the complete details of its source and of
-   any license or other restriction (including, but not limited to,
-   related patents, trademarks, and license agreements) of which you
-   are personally aware, and conspicuously marking the work as
-   "Submitted on behalf of a third-party: [named here]".
-   
-8. You agree to notify Aider AI of any facts or circumstances of
-   which you become aware that would make these representations
-   inaccurate in any respect.
-`````
-
-## File: aider/website/docs/legal/privacy.md
-`````markdown
----
-parent: More info
-nav_order: 500
----
-
-# Privacy policy
-
-[Aider AI LLC](/docs/faq.html#what-is-aider-ai-llc)
-(“Aider,” “we,” “our,” and/or “us”) values the privacy of individuals who use our website, programming tools, and related services (collectively, our “Services”). This privacy policy (the “Privacy Policy”) explains how we collect, use, and disclose information from users of our Services. By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. 
-
-### Information We Collect
-
-We may collect a variety of information from or about you or your devices from various sources, as described below.
-
-### A. Information You Provide to Us.
-
-**Communications.** If you contact us directly, we may receive additional information about you, such as your name, email address, the contents of a message or attachments that you may send to us, and other information you choose to provide.
-
-### B. Information We Collect When You Use Our Services. 
-
-**Device Information.** We may receive information about the device and software you use to access our Services, including IP address, device type, device identifiers, web browser type and version, and operating system version.
-
-**Usage Information.** We may automatically receive information about your interactions with our Services, like the pages or other content you view, referrer information (the website you visited before coming to our Services), and the dates and times of your visits.
-
-**Analytics Information.** If you use our programming tools, we may receive information about your interactions with the tools, such as how often certain features or commands are used, information about exceptions and errors, and which large language models are used. This information is associated with a randomly generated identifier, not any directly identifiable user information such as your name or email address. Please see the “Your Choices” section below for information on how to disable the collection of this information.
-
-**Information from Cookies and Other Tracking Technologies.** We and our third-party partners may collect information about your activities on our Services using cookies, pixel tags, SDKs, or other tracking technologies. Our third-party partners, such as analytics and security partners, may also use these technologies to collect information about your online activities over time and across different services. 
-
-
-### How We Use the Information We Collect
-
-We use the information we collect:
- 
-- To provide, maintain, improve, and enhance our Services;
-- To understand and analyze how you use our Services and develop new products, services, features, and functionality;
-- To communicate with you, provide you with updates and other information relating to our Services, provide information that you request, respond to comments and questions, and otherwise provide customer support;
-- To generate anonymized or aggregate data containing only de-identified, non-personal information that we may use for any lawful purposes such as to publish reports;
-- To find and prevent fraud and abuse, and respond to trust and safety issues that may arise; 
-- For compliance purposes, including enforcing our legal rights, or as may be required by applicable laws and regulations or requested by any judicial process or governmental agency; and
-- For other purposes for which we provide specific notice at the time the information is collected.
-
-### How We Disclose the Information We Collect
-
-**Affiliates.** We may disclose any information we receive to our current or future affiliates for any of the purposes described in this Privacy Policy.  
-
-**Vendors and Service Providers.** We may disclose any information we receive to vendors and service providers retained in connection with the provision of our Services. 
-
-**Analytics Partners.** We may use analytics services to collect and process certain analytics data to improve our Services, such as by improving the ability of our programming tools to work with LLMs, edit code, and complete user requests. 
-
-**As Required By Law and Similar Disclosures.** We may access, preserve, and disclose your information if we believe doing so is required or appropriate to: (a) comply with law enforcement requests and legal process, such as a court order or subpoena; (b) respond to your requests; or (c) protect your, our, or others’ rights, property, or safety. For the avoidance of doubt, the disclosure of your information may occur if you post any objectionable content on or through the Services.
-
-**Merger, Sale, or Other Asset Transfers.** We may transfer your information to service providers, advisors, potential transactional partners, or other third parties in connection with the consideration, negotiation, or completion of a corporate transaction in which we are acquired by or merged with another company or we sell, liquidate, or transfer all or a portion of our assets. The use of your information following any of these events will be governed by the provisions of this Privacy Policy in effect at the time the applicable information was collected.
-
-**Consent.** We may also disclose your information with your permission.
-
-### Your Choices
-
-**Analytics Information.** You can turn off analytics collection when using our programming tools. Please visit this 
-[documentation page](/docs/more/analytics.html)
-for more information about the data collected and your options.
-
-### Third Parties
-
-Our Services may contain links to other websites, products, or services that we do not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy does not apply to your activities on these third-party services or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.
-
-### Security 
-
-We make reasonable efforts to protect your information by using physical and electronic safeguards designed to improve the security of the information we maintain. However, because no electronic transmission or storage of information can be entirely secure, we can make no guarantees as to the security or privacy of your information.
-
-### Children’s Privacy
-
-We do not knowingly collect, maintain, or use personal information from children under 18 years of age, and no part of our Service(s) is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at privacy@aider.chat.
-
-### International Visitors
-
-Our Services are hosted in the United States and intended for visitors located within the United States. If you choose to use the Services from the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law, then please note that you are transferring your personal information outside of those regions to the U.S. for storage and processing. We may also transfer your data from the U.S. to other countries or regions in connection with storage and processing of data, fulfilling your requests, and operating the Services. By providing any information, including personal information, on or to the Services, you consent to such transfer, storage, and processing. 
-
-
-### Changes to this Privacy Policy
-
-We will post any adjustments to the Privacy Policy on this page, and the revised version will be effective when it is posted. If we materially change the ways in which we use or disclose personal information previously collected from you through the Services, we will notify you through the Services, by email, or other communication.
-
-### Contact Information
-
-If you have any questions, comments, or concerns about our processing activities, please email us at privacy@aider.chat.
-
-----
-
-<p class="post-date">
-Last updated 
-<!--[[[cog
-import subprocess
-import datetime
-
-result = subprocess.run(['git', 'log', '-1', '--format=%ct', 'aider/website/docs/legal/privacy.md'], capture_output=True, text=True)
-if result.returncode == 0:
-    timestamp = int(result.stdout.strip())
-    date = datetime.datetime.fromtimestamp(timestamp)
-    cog.out(f"{date.strftime('%B %d, %Y.')}")
-]]]-->
-December 06, 2024.
-<!--[[[end]]]-->
-
-</p>
-`````
-
-## File: aider/website/docs/llms/anthropic.md
+## File: llms/anthropic.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4563,7 +3841,7 @@ Adjust the `budget_tokens` value to change the target number of thinking tokens.
 More streamlined support will be coming soon.
 `````
 
-## File: aider/website/docs/llms/azure.md
+## File: llms/azure.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4598,7 +3876,7 @@ Note that aider will also use environment variables
 like `AZURE_OPENAI_API_xxx`.
 `````
 
-## File: aider/website/docs/llms/bedrock.md
+## File: llms/bedrock.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4731,7 +4009,7 @@ Also, see the
 [litellm docs on Bedrock](https://litellm.vercel.app/docs/providers/bedrock).
 `````
 
-## File: aider/website/docs/llms/cohere.md
+## File: llms/cohere.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4760,7 +4038,7 @@ aider --list-models cohere_chat/
 ```
 `````
 
-## File: aider/website/docs/llms/deepseek.md
+## File: llms/deepseek.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4784,7 +4062,7 @@ aider --model deepseek/deepseek-chat
 ```
 `````
 
-## File: aider/website/docs/llms/gemini.md
+## File: llms/gemini.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4814,7 +4092,7 @@ aider --list-models gemini/
 ```
 `````
 
-## File: aider/website/docs/llms/groq.md
+## File: llms/groq.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4843,7 +4121,7 @@ aider --list-models groq/
 ```
 `````
 
-## File: aider/website/docs/llms/lm-studio.md
+## File: llms/lm-studio.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4875,7 +4153,7 @@ section for information on warnings which will occur
 when working with models that aider is not familiar with.
 `````
 
-## File: aider/website/docs/llms/ollama.md
+## File: llms/ollama.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4943,7 +4221,7 @@ like this:
 ```
 `````
 
-## File: aider/website/docs/llms/openai-compat.md
+## File: llms/openai-compat.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -4976,7 +4254,7 @@ section for information on warnings which will occur
 when working with models that aider is not familiar with.
 `````
 
-## File: aider/website/docs/llms/openai.md
+## File: llms/openai.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5031,7 +4309,7 @@ if you are using them through another provider
 and see errors related to temperature or system prompt.
 `````
 
-## File: aider/website/docs/llms/openrouter.md
+## File: llms/openrouter.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5109,7 +4387,7 @@ See [Advanced model settings](https://aider.chat/docs/config/adv-model-settings.
 for more details about model settings files.
 `````
 
-## File: aider/website/docs/llms/other.md
+## File: llms/other.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5215,7 +4493,7 @@ cog.out(''.join(lines))
 <!--[[[end]]]-->
 `````
 
-## File: aider/website/docs/llms/vertex.md
+## File: llms/vertex.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5262,7 +4540,7 @@ model: vertex_ai/claude-3-5-sonnet@20240620
 ```
 `````
 
-## File: aider/website/docs/llms/warnings.md
+## File: llms/warnings.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5274,7 +4552,7 @@ nav_order: 900
 {% include model-warnings.md %}
 `````
 
-## File: aider/website/docs/llms/xai.md
+## File: llms/xai.md
 `````markdown
 ---
 parent: Connecting to LLMs
@@ -5300,604 +4578,7 @@ aider --list-models xai/
 ```
 `````
 
-## File: aider/website/docs/more/analytics.md
-`````markdown
----
-parent: More info
-nav_order: 500
-description: Opt-in, anonymous, no personal info.
----
-
-# Analytics
-
-Aider can collect anonymous analytics to help
-improve aider's ability to work with LLMs, edit code and complete user requests.
-
-## Opt-in, anonymous, no personal info
-
-Analytics are only collected if you agree and opt-in. 
-Aider respects your privacy and never collects your code, chat messages, keys or
-personal info.
-
-Aider collects information on:
-
-- which LLMs are used and with how many tokens,
-- which of aider's edit formats are used,
-- how often features and commands are used,
-- information about exceptions and errors,
-- etc
-
-These analytics are associated with an anonymous,
-randomly generated UUID4 user identifier.
-
-This information helps improve aider by identifying which models, edit formats,
-features and commands are most used.
-It also helps uncover bugs that users are experiencing, so that they can be fixed
-in upcoming releases.
-
-## Disabling analytics
-
-You can opt out of analytics forever by running this command one time:
-
-```
-aider --analytics-disable
-```
-
-## Enabling analytics
-
-The `--[no-]analytics` switch controls whether analytics are enabled for the
-current session:
-
-- `--analytics` will turn on analytics for the current session.
-This will *not* have any effect if you have permanently disabled analytics 
-with `--analytics-disable`.
-If this is the first time you have enabled analytics, aider
-will confirm you wish to opt-in to analytics.
-- `--no-analytics` will turn off analytics for the current session.
-- By default, if you don't provide `--analytics` or `--no-analytics`,
-aider will enable analytics for a random subset of users.
-This will never happen if you have permanently disabled analytics 
-with `--analytics-disable`.
-Randomly selected users will be asked if they wish to opt-in to analytics.
-
-
-## Opting in
-
-The first time analytics are enabled, you will need to agree to opt-in.
-
-```
-aider --analytics
-
-Aider respects your privacy and never collects your code, prompts, chats, keys or any personal
-info.
-For more info: https://aider.chat/docs/more/analytics.html
-Allow collection of anonymous analytics to help improve aider? (Y)es/(N)o [Yes]:
-```
-
-If you say "no", analytics will be permanently disabled.
-
-
-## Details about data being collected
-
-### Sample analytics data
-
-To get a better sense of what type of data is collected, you can review some
-[sample analytics logs](https://github.com/aider-ai/aider/blob/main/aider/website/assets/sample-analytics.jsonl).
-These are the last 1,000 analytics events from the author's
-personal use of aider, updated regularly.
-
-
-### Analytics code
-
-Since aider is open source, all the places where aider collects analytics
-are visible in the source code.
-They can be viewed using 
-[GitHub search](https://github.com/search?q=repo%3Aaider-ai%2Faider+%22.event%28%22&type=code).
-
-
-### Logging and inspecting analytics
-
-You can get a full log of the analytics that aider is collecting,
-in case you would like to audit or inspect this data.
-
-```
-aider --analytics-log filename.jsonl
-```
-
-If you want to just log analytics without reporting them, you can do:
-
-```
-aider --analytics-log filename.jsonl --no-analytics
-```
-
-
-## Reporting issues
-
-If you have concerns about any of the analytics that aider is collecting
-or our data practices
-please contact us by opening a
-[GitHub Issue](https://github.com/aider-ai/aider/issues).
-
-## Privacy policy
-
-Please see aider's
-[privacy policy](/docs/legal/privacy.html)
-for more details.
-`````
-
-## File: aider/website/docs/more/edit-formats.md
-`````markdown
----
-parent: More info
-nav_order: 490
-description: Aider uses various "edit formats" to let LLMs edit source files.
----
-
-# Edit formats
-
-Aider uses various "edit formats" to let LLMs edit source files.
-Different models work better or worse with different edit formats.
-Aider is configured to use the optimal format for most popular, common models.
-You can always force use of a specific edit format with 
-the `--edit-format` switch.
-
-## whole
-
-The "whole" edit format is the simplest possible editing format.
-The LLM is instructed to return a full, updated
-copy of each source file that needs changes.
-While simple, it can be slow and costly because the LLM has to return
-the *entire file* even if just a few lines are edited.
-
-The whole format expects the file path just before the fenced file content:
-
-````
-show_greeting.py
-```
-import sys
-
-def greeting(name):
-    print("Hey", name)
-
-if __name__ == '__main__':
-    greeting(sys.argv[1])
-```
-````
-
-
-## diff
-
-The "diff" edit format asks the LLM to specify file edits as a series of search/replace blocks.
-This is an efficient format, because the model only needs to return parts of the file
-which have changes.
-
-Edits are formatted using a syntax similar to the git merge conflict resolution markings,
-with the file path right before a fenced block:
-
-````
-mathweb/flask/app.py
-```
-<<<<<<< SEARCH
-from flask import Flask
-=======
-import math
-from flask import Flask
->>>>>>> REPLACE
-```
-````
-
-## diff-fenced
-
-The "diff-fenced" edit format is based on the diff format, but
-the file path is placed inside the fence.
-It is primarily used with the Gemini family of models,
-which often fail to conform to the fencing approach specified in the diff format.
-
-````
-```
-mathweb/flask/app.py
-<<<<<<< SEARCH
-from flask import Flask
-=======
-import math
-from flask import Flask
->>>>>>> REPLACE
-```
-````
-
-## udiff
-
-The "udiff" edit format is based on the widely used unified diff format,
-but [modified and simplified](/2023/12/21/unified-diffs.html).
-This is an efficient format, because the model only needs to return parts of the file
-which have changes.
-
-It was mainly used to the GPT-4 Turbo family of models,
-because it reduced their "lazy coding" tendencies.
-With other edit formats the GPT-4 Turbo models tended to elide
-large sections of code and replace them with "# ... original code here ..."
-style comments.
-
-
-````
-```diff
---- mathweb/flask/app.py
-+++ mathweb/flask/app.py
-@@ ... @@
--class MathWeb:
-+import sympy
-+
-+class MathWeb:
-```
-````
-
-## editor-diff and editor-whole
-
-These are streamlined versions of the diff and whole formats, intended to be used
-with `--editor-edit-format` when using
-[architect mode](/docs/usage/modes.html).
-The actual edit format is the same, but aider uses a simpler prompt that
-is more narrowly focused on just editing the file as opposed to
-solving the coding task.
-The architect model resolves the coding task and
-provides plain text instructions about which file changes need to be made.
-The editor interprets those instructions to produce the
-syntactically correct diff or whole edits.
-`````
-
-## File: aider/website/docs/more/infinite-output.md
-`````markdown
----
-parent: More info
-nav_order: 480
-description: Aider can handle "infinite output" from models that support prefill.
----
-
-# Infinite output
-
-LLM providers limit how much output a model can generate from a single request.
-This is usually called the output token limit.
-
-Aider is able to work around this limit with models that support
-"prefilling" the assistant response.
-When you use aider with a model that supports prefill, you will see
-"infinite output" noted in the announcement lines displayed at launch:
-
-```
-Aider v0.58.0
-Main model: claude-3-5-sonnet-20240620 with diff edit format, prompt cache, infinite output
-```
-
-Models that support prefill can be primed to think they started their response
-with a specific piece of text.
-You can put words in their mouth, and they will continue generating
-text from that point forward.
-
-When aider is collecting code edits from a model and
-it hits the output token limit,
-aider simply initiates another LLM request with the partial
-response prefilled.
-This prompts the model to continue where it left off,
-generating more of the desired response.
-This prefilling of the partially completed response can be repeated,
-allowing for very long outputs.
-Joining the text across these output limit boundaries 
-requires some heuristics, but is typically fairly reliable.
-
-Aider supports "infinite output" for models that support "prefill",
-such as:
-
-<!--[[[cog
-import requests
-import json
-
-# Fetch the JSON data
-url = "https://raw.githubusercontent.com/BerriAI/litellm/refs/heads/main/model_prices_and_context_window.json"
-response = requests.get(url)
-data = json.loads(response.text)
-
-# Process the JSON to find models with supports_assistant_prefill=true
-prefill_models = [model for model, info in data.items() if info.get('supports_assistant_prefill') == True]
-
-# Generate the list of models
-model_list = "\n".join(f"- {model}" for model in sorted(prefill_models))
-
-cog.out(model_list)
-]]]-->
-- anthropic.claude-3-5-haiku-20241022-v1:0
-- anthropic.claude-3-5-sonnet-20241022-v2:0
-- anthropic.claude-3-7-sonnet-20250219-v1:0
-- claude-3-5-haiku-20241022
-- claude-3-5-haiku-latest
-- claude-3-5-sonnet-20240620
-- claude-3-5-sonnet-20241022
-- claude-3-5-sonnet-latest
-- claude-3-7-sonnet-20250219
-- claude-3-7-sonnet-latest
-- claude-3-haiku-20240307
-- claude-3-opus-20240229
-- claude-3-opus-latest
-- claude-3-sonnet-20240229
-- codestral/codestral-2405
-- codestral/codestral-latest
-- deepseek/deepseek-chat
-- deepseek/deepseek-coder
-- deepseek/deepseek-reasoner
-- eu.anthropic.claude-3-5-haiku-20241022-v1:0
-- eu.anthropic.claude-3-5-sonnet-20241022-v2:0
-- mistral/codestral-2405
-- mistral/codestral-latest
-- mistral/codestral-mamba-latest
-- mistral/mistral-large-2402
-- mistral/mistral-large-2407
-- mistral/mistral-large-2411
-- mistral/mistral-large-latest
-- mistral/mistral-medium
-- mistral/mistral-medium-2312
-- mistral/mistral-medium-latest
-- mistral/mistral-small
-- mistral/mistral-small-latest
-- mistral/mistral-tiny
-- mistral/open-codestral-mamba
-- mistral/open-mistral-7b
-- mistral/open-mistral-nemo
-- mistral/open-mistral-nemo-2407
-- mistral/open-mixtral-8x22b
-- mistral/open-mixtral-8x7b
-- mistral/pixtral-12b-2409
-- mistral/pixtral-large-2411
-- mistral/pixtral-large-latest
-- openrouter/anthropic/claude-3.5-sonnet
-- openrouter/anthropic/claude-3.7-sonnet
-- openrouter/deepseek/deepseek-r1
-- us.anthropic.claude-3-5-haiku-20241022-v1:0
-- us.anthropic.claude-3-5-sonnet-20241022-v2:0
-- us.anthropic.claude-3-7-sonnet-20250219-v1:0
-- vertex_ai/claude-3-5-haiku
-- vertex_ai/claude-3-5-haiku@20241022
-- vertex_ai/claude-3-5-sonnet
-- vertex_ai/claude-3-5-sonnet-v2
-- vertex_ai/claude-3-5-sonnet-v2@20241022
-- vertex_ai/claude-3-5-sonnet@20240620
-- vertex_ai/claude-3-7-sonnet@20250219
-- vertex_ai/claude-3-haiku
-- vertex_ai/claude-3-haiku@20240307
-- vertex_ai/claude-3-opus
-- vertex_ai/claude-3-opus@20240229
-- vertex_ai/claude-3-sonnet
-- vertex_ai/claude-3-sonnet@20240229
-<!--[[[end]]]-->
-`````
-
-## File: aider/website/docs/recordings/auto-accept-architect.md
-`````markdown
----
-parent: Screen recordings
-nav_order: 1
-layout: minimal
-highlight_image: /assets/recordings.jpg
-description: See how a new command-line option is added to automatically accept edits proposed by the architect model, with implementation. Aider also updates the project's HISTORY file.
----
-
-# Add --auto-accept-architect feature
-
-<script>
-const recording_id = "auto-accept-architect";
-const recording_url = "https://gist.githubusercontent.com/paul-gauthier/e7383fbc29c9bb343ee6fb7ee5d77e15/raw/c2194334085304bb1c6bb80814d791704d9719b6/707774.cast";
-</script>
-
-{% include recording.md %}
-
-## Commentary
-
-- 0:01 We're going to add a new feature to automatically accept edits proposed by the architect model.
-- 0:11 First, let's add the new switch.
-- 0:40 Aider figured out that it should be passed to the Coder class.
-- 0:48 Now we need to implement the functionality.
-- 1:00 Let's do some manual testing.
-- 1:28 That worked. Let's make sure we can turn it off too.
-- 1:42 That worked too. Let's have aider update the HISTORY file to document the new feature.
-- 2:00 Let's quickly tidy up the changes to HISTORY.
-- 2:05 All done!
-`````
-
-## File: aider/website/docs/recordings/dont-drop-original-read-files.md
-`````markdown
----
-parent: Screen recordings
-nav_order: 1
-layout: minimal
-highlight_image: /assets/recordings.jpg
-description: Follow along as aider is modified to preserve read-only files specified at launch when using the /drop command. Aider does this implementation and adds test coverage.
----
-
-# Don't /drop read-only files added at launch
-
-<script>
-const recording_id = "dont-drop-original-read-files";
-const recording_url = "https://gist.githubusercontent.com/paul-gauthier/c2e7b2751925fb7bb47036cdd37ec40d/raw/08e62ab539e2b5d4b52c15c31d9a0d241377c17c/707583.cast";
-</script>
-
-{% include recording.md %}
-
-## Commentary
-
-- 0:01 We're going to update the /drop command to keep any read only files that were originally specified at launch.
-- 0:10 We've added files that handle the main CLI and in-chat slash commands like /drop.
-- 0:20 Let's explain the needed change to aider.
-- 1:20 Ok, let's look at the code.
-- 1:30 I'd prefer not to use "hasattr()", let's ask for improvements.
-- 1:45 Let's try some manual testing.
-- 2:10 Looks good. Let's check the existing test suite to ensure we didn't break anything.
-- 2:19 Let's ask aider to add tests for this.
-- 2:50 Tests look reasonable, we're done!
-`````
-
-## File: aider/website/docs/recordings/index.md
-`````markdown
----
-title: Screen recordings
-has_children: true
-nav_order: 75
-has_toc: false
-description: Screen recordings of aider building aider.
-highlight_image: /assets/recordings.jpg
----
-
-# Screen recordings
-
-Below are a series of screen recordings of the aider developer using aider
-to enhance aider.
-They contain commentary that describes how aider is being used,
-and might provide some inspiration for your own use of aider.
-
-{% assign sorted_pages = site.pages | where: "parent", "Screen recordings" | sort: "nav_order" %}
-{% for page in sorted_pages %}
-- [{{ page.title }}]({{ page.url | relative_url }}) - {{ page.description }}
-{% endfor %}
-`````
-
-## File: aider/website/docs/recordings/model-accepts-settings.md
-`````markdown
----
-parent: Screen recordings
-nav_order: 1
-layout: minimal
-highlight_image: /assets/recordings.jpg
-description: Watch the implementation of a warning system that alerts users when they try to apply reasoning settings to models that don't support them. Includes adding model metadata, confirmation dialogs, refactoring, and comprehensive test coverage.
----
-
-# Warn when users apply unsupported reasoning settings
-
-<script>
-const recording_id = "model-accepts-settings";
-const recording_url = "https://gist.githubusercontent.com/paul-gauthier/66b1b5aa7136147702c98afc4987c0d4/raw/4b5c7ddf7e80db1ff4dfa78fe158bc000fc42e0e/accepts-settings.cast";
-</script>
-
-{% include recording.md %}
-
-## Commentary
-
-- 0:01 Users sometimes run aider with "reasoning" settings that aren't supported by the model they're using. This can cause LLM API calls to completely fail, with non-specific error messages from the API provider. We're going to warn users up front to prevent this.
-- 0:25 Ok, let's ask aider to add a new model setting where we can note which reasoning settings it supports. And then print a warning if the user tries to apply an unsupported setting.
-- 1:30 Looks like it's including some extra changes we don't want.
-- 1:45 Let's have a look at the models code and clean up some stray lines.
-- 2:00 It also made the warning logic too conservative. We want to warn unless the setting is explicitly known to be supported.
-- 3:00 Ok, good. Now lets add a setting to silence these warnings for power users who are doing something intentional.
-- 3:45 Now we need to update the database of model settings to annotate which models support which reasoning settings. We'll start with the code that handles "fallback" settings for known models on unknown providers.
-- 4:45 Oh, we forgot to give aider the actual file with that code! Aider asks to see it.
-- 5:00 Ok, we've confused aider by asking it to change code it couldn't see.
-- 5:10 Let's clear the chat and refine the prompt and try again.
-- 6:00 Ok, looks good. Let's move on and update the full model settings database YAML file. Each main model like "o1" appears here from many providers, like OpenAI, OpenRouter, etc. We want to update them all.
-- 7:43 Let's interrupt and refine the prompt to be more clear about which models to update.
-- 9:20 Looks good. Let's review the YAML file and eyeball all the relevant models.
-- 10:20 Now let's do some manual testing.
-- 10:41 Ok, it should not be warning us about using "thinking tokens" with Sonnet 3.7.
-- 10:55 Let's see if aider can spot the problem?
-- 11:28 That doesn't sound like a promising solution. Let's add more of the relevant code, clear history and try again.
-- 12:00 Ok, let's try aider's proposed solution.
-- 12:32 And see if it worked... Nope! Still getting the unneeded warning. Undo that change!
-- 12:48 Time for some manual print debugging.
-- 13:00 It seems like the "accept_settings" value is not being set?
-- 14:30 Aha! I have a local model settings file for Sonnet which overrides aider's built in settings. And we did not update it. Let's add "accepts_settings" there.
-- 14:45 That was the problem, it wasn't a bug.
-- 14:59 Ok, let's add test coverage for all this stuff.
-- 15:09 And while aider writes tests, let's use "git diff" to review all the changes we've made.
-- 15:34 Aider is done writing tests, let's try them.
-- 15:44 One passed, one failed. Let's eyeball the passing test first.
-- 16:04 And let's see if aider can fix the failing test.
-- 16:14 Aider needs to see another file, which makes sense.
-- 16:29 It's found the problem, but is trying to "fix" the code. We want it to fix the test.
-- 16:47 Ok, tests are passing.
-- 16:55 We should stop and ask the user "are you sure?", not just flash a warning if they're about to break their API calls.
-- 17:59 Ok, that confirmation dialog looks good.
-- 18:35 This code is a little bit repetitive. Let's do a bit of refactoring.
-- 19:44 Sonnet is messing up the code editing instructions, so aider is retrying.
-- 19:54 Let's clear the chat history and try again.
-- 20:25 Are tests still passing after the refactor?
-- 20:55 Tests passed, good. Let's tweak the warning text.
-- 21:10 And now let's have aider update the docs to explain these changes.
-- 22:32 Let's proofread and edit the updated docs.
-- 24:25 And a "git diff" of all the docs changes to do a final check.
-- 24:56 Let's have aider update the project's HISTORY file.
-- 25:35 We can refine the HISTORY entries a bit.
-- 26:20 All done!
-`````
-
-## File: aider/website/docs/recordings/tree-sitter-language-pack.md
-`````markdown
----
-parent: Screen recordings
-nav_order: 0
-layout: minimal
-highlight_image: /assets/recordings.jpg
-description: Watch how aider adds support for tons of new programming languages by integrating with tree-sitter-language-pack. Demonstrates using aider to script downloading a collection of files, and using ad-hoc bash scripts to have aider modify a collection of files.
----
-
-# Add language support via tree-sitter-language-pack
-
-<script>
-const recording_id = "tree-sitter-language-pack";
-const recording_url = "https://gist.githubusercontent.com/paul-gauthier/a990333449b09e2793088a45eb1587f4/raw/364124781cca282907ccdc7567cdfc588a9b438b/tmp.redacted.cast";
-</script>
-
-{% include recording.md %}
-
-
-## Commentary
-
-- 0:01 We're going to add a ton of new languages to aider via tree-sitter-language-pack.
-- 0:10 First, lets try and find which languages it supports.
-- 1:00 Ok, there's a language definitions json file
-- 1:10 Does it have the github repos for each language?
-- 1:29 Ok, this is what we need.
-- 1:45 We need to get all the tags files from each repository for aider's repo-map. Let's have aider write a script to fetch them all.
-- 2:05 We'll show aider the language definitions json file.
-- 3:37 Looks like it can't find most of the tags.scm files.
-- 4:19 Maybe we should have it try other branches besides master?
-- 5:02 Ok, it seems to be downloading them now.
-- 5:55 Let's make it so we can re-run the script and only download files we haven't fetched yet.
-- 6:12 I see lots of tags files, so it's working.
-- 6:30 Ok, restart to run with latest code. This will take awhile to fetch them all.
-- 9:02 The Grep-AST module needs to know about all the new languages.
-- 9:45 Let's have aider add them all, and register each using their commonly used file extensions.
-- 10:15 Some of the languages need to be recognized by their base name, not by their extension.
-- 11:15 Let's sanity check if Grep-AST can handle PowerShell, one of the new languages.
-- 12:00 Looks like it's parsing PowerShell fine.
-- 13:00 Ok, let's download all the tags files into the right spot in the aider repo.
-- 14:00 This will take a minute...
-- 16:07 Delete some no-op or empty tags files.
-- 16:16 Let's commit all the unmodified tags files.
-- 16:33 We need to update each tag file, so that aider can identify names of functions, classes, etc in all these languages.
-- 17:01 Let's use a bash loop to script aider to modify each tags file.
-- 17:12 I'm giving aider a read-only example of an already modified tags file, as an example to follow.
-- 19:04 Looks like it correctly updated the first couple of tags files.
-- 19:28 Let's grep to watch aider's progress working through the list of files.
-- 20:20 It's working on the Dart language now...
-- 20:50 E-lisp is up next...
-- 21:30 This is going to take a little while...
-- 24:39 Let's add a README file with attribution for these tags files.
-- 26:55 Ok, all the files are updated with tags for definitions and references to named code objects.
-- 27:10 Let's add test coverage to be sure these languages work with the repo-map.
-- 27:19 Each language needs a "fixture" with some sample code to parse during the test. Let's show aider the layout of the fixtures directory.
-- 27:50 We can use a bash loop to ask aider to add test coverage for each new tags file.
-- 28:12 We'll pass the fixtures directory listing to aider.
-- 28:52 Just need to fix the bash to correctly iterate through the list of tags files.
-- 29:27 I forgot to ask aider to actually generate a sample code fixture for each language.
-- 30:25 Lets run the repo-map tests to see if the first new test works.
-- 30:37 Tests for the Arduino language failed, with an empty repo-map? That's not good.
-- 31:52 Can aider figure out what's wrong?
-- 32:27 Well, aider made the test pass by basically skipping Arduino.
-- 32:36 Let me see if I can use Grep-AST on the new Arduino fixture code.
-- 32:42 Oh! I'm not using the updated Grep-AST that knows about all the new languages.
-- 32:54 Ok, now we're parsing Arduino code properly. Undo aider's bogus test fix.
-- 33:05 Ok, arduino passes now but there seems to be a regression with tsx?
-- 33:20 Can aider figure out why?
-- 34:10 Let's check the parsers map.
-- 35:00 Well, that's all for this recording. The tsx problem was due to a bad mapping from ".tsx" to "typescript" in the map that aider generated earlier.
-`````
-
-## File: aider/website/docs/troubleshooting/aider-not-found.md
+## File: troubleshooting/aider-not-found.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -5925,7 +4606,7 @@ You should also consider
 [installing aider using aider-install, uv or pipx](/docs/install.html).
 `````
 
-## File: aider/website/docs/troubleshooting/edit-errors.md
+## File: troubleshooting/edit-errors.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6005,7 +4686,7 @@ following edit format instructions.
 {% include help.md %}
 `````
 
-## File: aider/website/docs/troubleshooting/imports.md
+## File: troubleshooting/imports.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6071,7 +4752,7 @@ and sometimes introduces bugs or backwards incompatible changes.
 {% include replit-pipx.md %}
 `````
 
-## File: aider/website/docs/troubleshooting/models-and-keys.md
+## File: troubleshooting/models-and-keys.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6107,7 +4788,7 @@ For more information, see the documentation sections:
 - [Configuring API keys](https://aider.chat/docs/config/api-keys.html)
 `````
 
-## File: aider/website/docs/troubleshooting/support.md
+## File: troubleshooting/support.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6190,7 +4871,7 @@ Keep in mind that the performance and capabilities of local LLMs may vary depend
 {% include help.md %}
 `````
 
-## File: aider/website/docs/troubleshooting/token-limits.md
+## File: troubleshooting/token-limits.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6290,7 +4971,7 @@ and see if your token limit problems resolve.
 {% include help.md %}
 `````
 
-## File: aider/website/docs/troubleshooting/warnings.md
+## File: troubleshooting/warnings.md
 `````markdown
 ---
 parent: Troubleshooting
@@ -6306,7 +4987,7 @@ nav_order: 20
 {% include help.md %}
 `````
 
-## File: aider/website/docs/usage/browser.md
+## File: usage/browser.md
 `````markdown
 ---
 title: Aider in your browser
@@ -6367,7 +5048,7 @@ aider --browser
 ```
 `````
 
-## File: aider/website/docs/usage/caching.md
+## File: usage/caching.md
 `````markdown
 ---
 title: Prompt caching
@@ -6419,7 +5100,7 @@ Aider will ping up to `N` times over a period of `N*5` minutes
 after each message you send.
 `````
 
-## File: aider/website/docs/usage/commands.md
+## File: usage/commands.md
 `````markdown
 ---
 parent: Usage
@@ -6547,7 +5228,7 @@ To use vi/vim keybindings, run aider with the `--vim` switch.
 - `Ctrl-R` : Redo the last undone change.
 `````
 
-## File: aider/website/docs/usage/conventions.md
+## File: usage/conventions.md
 `````markdown
 ---
 parent: Usage
@@ -6668,7 +5349,7 @@ which is perhaps more typical in small python scripts.
 </div>
 `````
 
-## File: aider/website/docs/usage/copypaste.md
+## File: usage/copypaste.md
 `````markdown
 ---
 title: Copy/paste with web chat
@@ -6793,7 +5474,7 @@ will keep you in compliance.
 Again, do not use these features in violation of any service's Terms Of Service.
 `````
 
-## File: aider/website/docs/usage/images-urls.md
+## File: usage/images-urls.md
 `````markdown
 ---
 parent: Usage
@@ -6845,7 +5526,7 @@ python -m aider.scrape https://aider.chat/docs/usage/tips.html
 ```
 `````
 
-## File: aider/website/docs/usage/lint-test.md
+## File: usage/lint-test.md
 `````markdown
 ---
 parent: Usage
@@ -6965,7 +5646,7 @@ ValueError: something bad happened
 </div>
 `````
 
-## File: aider/website/docs/usage/modes.md
+## File: usage/modes.md
 `````markdown
 ---
 parent: Usage
@@ -7108,7 +5789,7 @@ from math import factorial
 </div>
 `````
 
-## File: aider/website/docs/usage/not-code.md
+## File: usage/not-code.md
 `````markdown
 ---
 parent: Usage
@@ -7289,7 +5970,7 @@ Added pom.xml to the chat.
 </div>
 `````
 
-## File: aider/website/docs/usage/notifications.md
+## File: usage/notifications.md
 `````markdown
 ---
 title: Notifications
@@ -7380,7 +6061,7 @@ AIDER_NOTIFICATIONS_COMMAND=your-custom-command
 ```
 `````
 
-## File: aider/website/docs/usage/tips.md
+## File: usage/tips.md
 `````markdown
 ---
 parent: Usage
@@ -7462,7 +6143,7 @@ Use Control-C to interrupt aider if it isn't providing a useful response. The pa
 {% include multi-line.md %}
 `````
 
-## File: aider/website/docs/usage/tutorials.md
+## File: usage/tutorials.md
 `````markdown
 ---
 parent: Usage
@@ -7496,7 +6177,7 @@ Thanks to all these great creators for taking the time
 to share their experiences coding with aider!
 `````
 
-## File: aider/website/docs/usage/voice.md
+## File: usage/voice.md
 `````markdown
 ---
 parent: Usage
@@ -7621,7 +6302,7 @@ if __name__ == '__main__':
 <br/>
 `````
 
-## File: aider/website/docs/usage/watch.md
+## File: usage/watch.md
 `````markdown
 ---
 title: Aider in your IDE
@@ -7919,585 +6600,7 @@ the way [Override](https://github.com/oi-overide) watches for file changes
 to find prompts embedded within `//> a specific set of delimiters <//`.*
 `````
 
-## File: aider/website/docs/benchmarks-0125.md
-`````markdown
----
-title: The January GPT-4 Turbo is lazier than the last version
-excerpt: The new `gpt-4-0125-preview` model is quantiatively lazier at coding than previous GPT-4 versions, according to a new "laziness" benchmark.
-highlight_image: /assets/benchmarks-0125.jpg
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-{% endif %}
-
-# The January GPT-4 Turbo is lazier than the last version
-
-[![benchmark results](/assets/benchmarks-0125.svg)](https://aider.chat/assets/benchmarks-0125.svg)
-
-[OpenAI just released a new version of GPT-4 Turbo](https://openai.com/blog/new-embedding-models-and-api-updates).
-This new model is intended to reduce the "laziness" that has been widely observed with the previous `gpt-4-1106-preview` model:
-
-> Today, we are releasing an updated GPT-4 Turbo preview model, gpt-4-0125-preview. This model completes tasks like code generation more thoroughly than the previous preview model and is intended to reduce cases of “laziness” where the model doesn’t complete a task.
-
-With that in mind, I've been benchmarking the new model using
-aider's existing
-[lazy coding benchmark](https://aider.chat/docs/unified-diffs.html).
-
-## Benchmark results
-
-Overall,
-the new `gpt-4-0125-preview` model seems lazier
-than the November `gpt-4-1106-preview` model:
-
-- It gets worse benchmark scores when using the [unified diffs](https://aider.chat/docs/unified-diffs.html) code editing format.
-- Using aider's older SEARCH/REPLACE block editing format, the new January model outperforms the older November model. But it still performs worse than both models using unified diffs.
-
-## Related reports
-
-This is one in a series of reports
-that use the aider benchmarking suite to assess and compare the code
-editing capabilities of OpenAI's GPT models.
-You can review the other reports
-for additional information:
-
-- [GPT code editing benchmarks](https://aider.chat/docs/benchmarks.html) evaluates the March and June versions of GPT-3.5 and GPT-4.
-- [Code editing benchmarks for OpenAI's "1106" models](https://aider.chat/docs/benchmarks-1106.html).
-- [Aider's lazy coding benchmark](https://aider.chat/docs/unified-diffs.html).
-`````
-
-## File: aider/website/docs/benchmarks-1106.md
-`````markdown
----
-title: Code editing benchmarks for OpenAI's "1106" models
-excerpt: A quantitative comparison of the code editing capabilities of the new GPT-3.5 and GPT-4 versions that were released in Nov 2023.
-highlight_image: /assets/benchmarks-1106.jpg
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-{% endif %}
-
-# Code editing benchmarks for OpenAI's "1106" models
-
-[![benchmark results](/assets/benchmarks-1106.svg)](https://aider.chat/assets/benchmarks-1106.svg)
-
-[![benchmark results](/assets/benchmarks-speed-1106.svg)](https://aider.chat/assets/benchmarks-speed-1106.svg)
-
-[OpenAI just released new versions of GPT-3.5 and GPT-4](https://openai.com/blog/new-models-and-developer-products-announced-at-devday),
-and there's a lot
-of interest about their ability to code compared to the previous versions.
-With that in mind, I've been benchmarking the new models.
-
-[Aider](https://github.com/Aider-AI/aider)
-is an open source command line chat tool that lets you work with GPT to edit
-code in your local git repo.
-To do this, aider needs to be able to reliably recognize when GPT wants to edit
-your source code,
-determine which files it wants to modify
-and accurately apply the changes it's trying to make.
-Doing a good job on this "code editing" task requires a good LLM, good prompting and
-a good tool driving the interactions with the LLM.
-
-Aider relies on a
-[code editing benchmark](https://aider.chat/docs/benchmarks.html)
-to quantitatively evaluate
-performance
-whenever one of these things changes.
-For example,
-whenever I change aider's prompting or the backend which drives LLM conversations,
-I run the benchmark to make sure these changes produce improvements (not regressions).
-
-The benchmark uses aider to try and complete
-[133 Exercism Python coding exercises](https://github.com/exercism/python).
-For each exercise, Exercism provides a starting python file with stubs for the needed functions,
-a natural language description of the problem to solve
-and a test suite to evaluate whether the coder has correctly solved the problem.
-
-The benchmark gives aider two tries to complete the task:
-
-1. On the first try, aider gives GPT the stub code file to edit and the natural language instructions that describe the problem. This reflects how you code with aider. You add your source code files to the chat and ask for changes, which are automatically applied.
-2. If the test suite fails after the first try, aider gives GPT the test error output and asks it to fix the code. Aider supports this sort of interaction using a command like `/run pytest` to run and share pytest results in the chat with GPT. You can `/run` whatever tests/linters/etc make sense for your language/framework/situation.
-
-## Benchmark results
-
-### gpt-4-1106-preview
-
-For now, I have only benchmarked the GPT-4 models using the `diff` edit method.
-This is the edit format that aider uses by default with gpt-4.
-
-- The new `gpt-4-1106-preview` model seems **2-2.5X faster** than the June GPT-4 model.
-- **It seems better at producing correct code on the first try**. It gets
-53% of the coding exercises correct, without needing to see errors from the test suite. Previous models only get 46-47% of the exercises correct on the first try.
-- The new model seems to perform similar
-(~65%) to the old models (63-64%) after their second chance to correct bugs by reviewing test suite error output.
-
-### gpt-3.5-turbo-1106
-
-I benchmarked the GPT-3.5 models with both the `whole` and `diff` edit format.
-None of the gpt-3.5 models seem able to effectively use the `diff` edit format, including the newest November (1106) model.
-
-The comments below only focus on comparing the `whole` edit format results:
-
-- The new `gpt-3.5-turbo-1106` model is completing the benchmark **3-4X faster** than the earlier GPT-3.5 models.
-- The success rate after the first try of 42% is comparable to the previous June (0613) model. The new November and previous June models are both worse than the original March (0301) model's 50% result on the first try.
-- The new model's 56% success rate after the second try seems comparable to the original March model, and somewhat better than the June model's 50% score.
-
-
-## Related reports
-
-This is one in a series of reports
-that use the aider benchmarking suite to assess and compare the code
-editing capabilities of OpenAI's GPT models.
-You can review the other reports
-for additional information:
-
-- [GPT code editing benchmarks](https://aider.chat/docs/benchmarks.html) evaluates the March and June versions of GPT-3.5 and GPT-4.
-- [Code editing speed benchmarks for OpenAI's "1106" models](https://aider.chat/2023/11/06/benchmarks-speed-1106.html) compares the performance of the new GPT models.
-
-
-## Updates
-
-Last updated 11/14/23.
-OpenAI has relaxed rate limits so these results are no longer considered preliminary.
-`````
-
-## File: aider/website/docs/benchmarks-speed-1106.md
-`````markdown
----
-title: Speed benchmarks of GPT-4 Turbo and gpt-3.5-turbo-1106
-excerpt: This report provides a detailed comparison of the speed of GPT-4 Turbo and gpt-3.5-turbo-1106 models based on the aider benchmarking suite.
-canonical_url: https://aider.chat/2023/11/06/benchmarks-speed-1106.html
-highlight_image: /assets/benchmarks-speed-1106.jpg
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-{% endif %}
-
-# Speed benchmarks of GPT-4 Turbo and gpt-3.5-turbo-1106
-
-<p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
-
-[![benchmark results](/assets/benchmarks-speed-1106.svg)](https://aider.chat/assets/benchmarks-speed-1106.svg)
-
-[OpenAI just released new versions of GPT-3.5 and GPT-4](https://openai.com/blog/new-models-and-developer-products-announced-at-devday),
-and there's a lot
-of interest about their capabilities and performance.
-With that in mind, I've been benchmarking the new models.
-
-[Aider](https://github.com/Aider-AI/aider)
-is an open source command line chat tool that lets you work with GPT to edit
-code in your local git repo.
-Aider relies on a
-[code editing benchmark](https://aider.chat/docs/benchmarks.html)
-to quantitatively evaluate
-performance.
-
-This is the latest in a series of reports
-that use the aider benchmarking suite to assess and compare the code
-editing capabilities of OpenAI's GPT models. You can review previous
-reports to get more background on aider's benchmark suite:
-
-- [GPT code editing benchmarks](https://aider.chat/docs/benchmarks.html) evaluates the March and June versions of GPT-3.5 and GPT-4.
-- [Code editing skill benchmarks for OpenAI's "1106" models](https://aider.chat/docs/benchmarks-1106.html) compares the olders models to the November (1106) models.
-
-## Speed
-
-This report compares the **speed** of the various GPT models.
-Aider's benchmark measures the response time of the OpenAI chat completion
-endpoint each time it asks GPT to solve a programming exercise in the benchmark
-suite. These results measure only the time spent waiting for OpenAI to
-respond to the prompt.
-So they are measuring
-how fast these models can
-generate responses which primarily consist of source code.
-
-Some observations:
-
-- **GPT-3.5 got 6-11x faster.** The `gpt-3.5-turbo-1106` model is 6-11x faster than the June (0613) version which has been the default `gpt-3.5-turbo` model.
-- **GPT-4 Turbo is 2-2.5x faster.** The new `gpt-4-1106-preview` model is 2-2.5x faster than the June (0613) version which has been the default `gpt-4` model.
-- The old March (0301) version of GPT-3.5 is actually faster than the June (0613) version. This was a surprising discovery.
-
-## Updates
-
-Last updated 11/14/23.
-OpenAI has relaxed rate limits so these results are no longer considered preliminary.
-`````
-
-## File: aider/website/docs/benchmarks.md
-`````markdown
----
-title: GPT code editing benchmarks
-excerpt: Benchmarking GPT-3.5 and GPT-4 code editing skill using a new code editing benchmark suite based on the Exercism python exercises.
-highlight_image: /assets/benchmarks.jpg
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-{% endif %}
-
-# GPT code editing benchmarks
-
-[![benchmark results](/assets/benchmarks.svg)](https://aider.chat/assets/benchmarks.svg)
-
-Aider is an open source command line chat tool that lets you work with GPT to edit
-code in your local git repo.
-To do this, aider needs to be able to reliably recognize when GPT wants to edit local files,
-determine which files it wants to modify and what changes to save.
-Such automated
-code editing hinges on using the system prompt
-to tell GPT how to structure code edits in its responses.
-
-Aider currently asks GPT to use simple text based "edit formats", but
-[OpenAI's new function calling
-API](https://openai.com/blog/function-calling-and-other-api-updates)
-looks like a promising way to create more structured edit formats.
-After implementing a couple of function based edit formats,
-I wanted
-to measure the potential benefits
-of switching aider to use them by default.
-
-With this in mind, I developed a
-benchmark based on the [Exercism
-python](https://github.com/exercism/python) coding exercises.
-This
-benchmark evaluates how effectively aider and GPT can translate a
-natural language coding request into executable code saved into
-files that pass unit tests.
-It provides an end-to-end evaluation of not just
-GPT's coding ability, but also its capacity to *edit existing code*
-and *format those code edits* so that aider can save the
-edits to the local source files.
-
-I ran the benchmark
-on all the ChatGPT models (except `gpt-4-32k`), using a variety of edit formats.
-The results were interesting:
-
-  - **Plain text edit formats worked best.** Asking GPT to return an updated copy of the whole file in a standard markdown fenced code block proved to be the most reliable and effective edit format across all GPT-3.5 and GPT-4 models. The results for this `whole` edit format are shown in solid blue in the graph.
-  - **Function calls performed worse.** Using the new functions API for edits performed worse than the above whole file method, for all the models. GPT-3.5 especially produced inferior code and frequently mangled this output format. This was surprising, as the functions API was introduced to enhance the reliability of structured outputs. The results for these `...-func` edit methods are shown as patterned bars in the graph (both green and blue).
-  - **The new June GPT-3.5 models did a bit worse than the old June model.** The performance of the new June (`0613`) versions of GPT-3.5 appears to be a bit worse than the February (`0301`) version. This is visible if you look at the "first attempt" markers on the first three solid blue bars and also by comparing the first three solid green `diff` bars.
-  - **GPT-4 does better than GPT-3.5,** as expected.
-
-The quantitative benchmark results agree with my intuitions
-about prompting GPT for complex tasks like coding. It's beneficial to
-minimize the "cognitive overhead" of formatting the response, allowing
-GPT to concentrate on the coding task at hand.
-
-As a thought experiment, imagine a slack conversation with a editor developer where
-you ask them to write the code to add some new feature to your app.
-They're going to type the response back to you by hand in the chat.
-Should they type out the
-code and wrap it in a normal markdown code block?
-Or should they type up a properly escaped and
-syntactically correct json data structure
-that contains the text of the new code?
-
-Using more complex output formats with GPT seems to cause two issues:
-
-  - It makes GPT write worse code. Keeping the output format simple seems to allow GPT to devote more attention to the actual coding task.
-  - It reduces GPT's adherence to the output format, making it more challenging for tools like aider to accurately identify and apply the edits GPT is attempting to make.
-
-I was expecting to start using function call based edits in aider for both GPT-3.5 and GPT-4.
-But given these benchmark results, I won't be adopting the functions API
-at this time.
-I will certainly plan to benchmark functions again with future versions of the models.
-
-More details on the benchmark, edit formats and results are discussed below.
-
-
-## The benchmark
-
-The benchmark uses
-[133 practice exercises from the Exercism python repository](https://github.com/exercism/python/tree/main/exercises/practice).
-These
-exercises were designed to help individuals learn Python and hone
-their coding skills.
-
-Each exercise includes:
-
-  - [Instructions](https://github.com/exercism/python/blob/main/exercises/practice/anagram/.docs/instructions.md), provided in markdown files.
-  - [Stub python code](https://github.com/exercism/python/blob/main/exercises/practice/anagram/anagram.py) in an *implementation file*, specifying the functions or classes that need to be implemented.
-  - [Unit tests](https://github.com/exercism/python/blob/main/exercises/practice/anagram/anagram_test.py) in a separate python file.
-
-The goal is for GPT to read the instructions, implement the provided function/class skeletons
-and pass all the unit tests. The benchmark measures what percentage of
-the 133 exercises are completed successfully, causing all the associated unit tests to pass.
-
-To start each exercise, aider sends GPT
-the initial contents of the implementation file,
-the Exercism instructions
-and a final instruction:
-
-```
-Use the above instructions to modify the supplied files: <implementation file>
-Keep and implement the existing function or class stubs, they will be called from unit tests.
-Only use standard python libraries, don't suggest installing any packages.
-```
-
-Aider updates the implementation file based on GPT's reply and runs
-the unit tests. If all tests pass, the exercise is considered
-complete. If some tests fail, aider sends GPT a second message with
-the test error output. It only sends the first 50 lines of test errors
-to try and avoid exceeding the context window of the smaller models. Aider
-also includes this final instruction:
-
-```
-See the testing errors above.
-The tests are correct.
-Fix the code in <implementation file> to resolve the errors.
-```
-
-Requiring GPT to fix its first implementation in response to test failures
-is another way in which this benchmark stresses code editing skill.
-This second chance is also important because it
-gives GPT the opportunity to adjust if the
-instructions were imprecise with respect to the
-specific requirements of the unit tests.
-Many of the exercises have multiple paragraphs of instructions,
-and most human coders would likely fail some tests on their
-first try.
-
-The bars in the graph show the percent of exercises that were completed by
-each model and edit format combination. The full bar height represents
-the final outcome following both coding attempts.
-Each bar also has a horizontal mark that shows
-the intermediate performance after the first coding attempt,
-without the benefit of the second try that includes the test error output.
-
-It's worth noting that GPT never gets to see the source code of the
-unit tests during the benchmark. It only sees the error output from
-failed tests. Of course, all of this code was probably part of its
-original training data!
-
-In summary, passing an exercise means GPT was able to:
-
-  - Write the required code (possibly after reviewing test error output),
-  - Correctly package all of the code edits into the edit format so that aider can process and save it to the implementation file.
-
-Conversely, failing an exercise only requires a breakdown in one of
-those steps. In practice, GPT fails at different steps in different
-exercises. Sometimes it simply writes the wrong code. Other times, it
-fails to format the code edits in a way that conforms to the edit
-format, resulting in the code not being saved correctly.
-
-It's worth keeping in mind that changing the edit format often affects
-both aspects of GPT's performance.
-Complex edit formats often lead GPT to write worse code *and* make it less
-successful at formatting the edits correctly.
-
-
-## Edit formats
-
-I benchmarked 4 different edit formats, described below.
-Each description includes a sample response that GPT might provide to a user who
-requests:
-"Change the print from hello to goodbye."
-
-### whole
-
-The
-[whole](https://github.com/Aider-AI/aider/blob/main/aider/coders/wholefile_prompts.py)
-format asks GPT to return an updated copy of the entire file, including any changes.
-The file should be
-formatted with normal markdown triple-backtick fences, inlined with the rest of its response text.
-
-This format is very similar to how ChatGPT returns code snippets during normal chats, except with the addition of a filename right before the opening triple-backticks.
-
-````
-Here is the updated copy of your file demo.py:
-
-demo.py
-```python
-def main():
-    print("goodbye")
-```
-````
-
-### diff
-
-The [diff](https://github.com/Aider-AI/aider/blob/main/aider/coders/editblock_prompts.py)
-format also asks GPT to return edits as part of the normal response text,
-in a simple diff format.
-Each edit is a fenced code block that
-specifies the filename and a chunk of ORIGINAL and UPDATED code.
-GPT provides some original lines from the file and then a new updated set of lines.
-
-````
-Here are the changes you requested to demo.py:
-
-```python
-demo.py
-<<<<<<< ORIGINAL
-    print("hello")
-=======
-    print("goodbye")
->>>>>>> UPDATED
-```
-````
-
-### whole-func
-
-The [whole-func](https://github.com/Aider-AI/aider/blob/main/aider/coders/wholefile_func_coder.py)
-format requests updated copies of whole files to be returned using the function call API.
-
-
-```
-{
-    "explanation": "Changed hello to goodbye.",
-    "files": [
-        {
-            "path": "demo.py",
-            "content": "def main():\n    print(\"goodbye\")\n"
-        }
-}
-```
-
-### diff-func
-
-The
-[diff-func](https://github.com/Aider-AI/aider/blob/main/aider/coders/editblock_func_coder.py)
-format requests a list of
-original/updated style edits to be returned using the function call API.
-
-```
-{
-    "explanation": "Changed hello to goodbye.",
-    "edits": [
-        {
-            "path": "demo.py",
-            "original_lines": [
-                "    print(\"hello\")"
-            ],
-            "updated_lines": [
-                "    print(\"goodbye\")"
-            ],
-        }
-    ]
-}
-```
-
-## GPT-3.5's performance
-
-### The `0613` models seem worse?
-
-The GPT-3.5 benchmark results have me fairly convinced that the new
-`gpt-3.5-turbo-0613` and `gpt-3.5-16k-0613` models
-are a bit worse at code editing than
-the older `gpt-3.5-turbo-0301` model.
-
-This is visible in the "first attempt"
-portion of each result, before GPT gets a second chance to edit the code.
-Look at the horizontal white line in the middle of the first three blue bars.
-Performance with the `whole` edit format was 46% for the
-February model and only 39% for the June models.
-
-But also note how much the solid green `diff` bars
-degrade between the February and June GPT-3.5 models.
-They drop from 30% down to about 19%.
-
-I saw other signs of this degraded performance
-in earlier versions of the
-benchmark as well.
-
-### Pathological use of `diff`
-
-When GPT-3.5 is able to correctly generate the `diff` edit format,
-it often uses it in a pathological manner. It places the *entire*
-original source file in the ORIGINAL block and the entire updated file
-in the UPDATED block. This is strictly worse than just using the
-`whole` edit format, as GPT is sending two full copies of the file.
-
-### Hallucinated function calls
-
-When GPT-3.5 uses the functions API
-it is prone to ignoring the JSON Schema that specifies valid functions.
-It often returns a completely novel and semantically
-invalid `function_call` fragment with `"name": "python"`.
-
-The `arguments` attribute is supposed to be a set of key/value pairs
-with the arguments to the function specified in the `name` field.
-Instead, GPT-3.5 frequently just stuffs an entire python
-file into that field.
-
-```
-        "function_call": {
-          "name": "python",
-          "arguments": "def main():\n    print(\"hello\")\n"
-        },
-```
-
-It seems like it might be getting confused by fine-tuning that was
-done for the ChatGPT code interpreter plugin?
-
-
-
-
-## Randomness
-
-The benchmark attempts to be deterministic, always sending identical
-requests for each exercise on repeated runs.
-As part of this effort,
-when sending test error output to GPT,
-it removes the wall-clock timing information that
-is normally included by the `unittest` module.
-
-The benchmark harness also logs SHA hashes of
-all the OpenAI API requests and replies.
-This makes it possible to
-detect randomness or nondeterminism
-in the benchmarking process.
-
-It turns out that the OpenAI chat APIs are not deterministic, even at
-`temperature=0`.  The same identical request will produce multiple
-distinct responses, usually less than 5-10 variations.  This suggests
-that OpenAI may be load balancing their API across a number of
-slightly different instances of the model?
-
-For certain exercises, some of these variable responses pass the unit tests while
-other variants do not. Results for exercises like this, which are
-"on the bubble",
-are therefore a bit random, depending on which variant OpenAI returns.
-
-Given that, it would be ideal to run all 133 exercises many times for each
-model/edit-format combination and report an average performance.
-This would average away the effect of the API variance.
-It would also significantly increase the cost of this sort of benchmarking.
-So I didn't do that.
-
-Benchmarking against 133 exercises already provides some robustness, since
-we are measuring the performance across many exercises.
-
-But to get a sense of how much the API variance impacts the benchmark outcomes,
-I ran all 133 exercises 10 times each
-against `gpt-3.5-turbo-0613` with the `whole` edit format.
-You'll see one set of error bars in the graph, which show
-the range of results from those 10 runs.
-
-The OpenAI API randomness doesn't seem to
-cause a large variance in the overall benchmark results.
-
-## Conclusions
-
-Based on these benchmark results, aider will continue to use
-the `whole` edit format for GPT-3.5, and `diff` for GPT-4.
-
-GPT-4 gets comparable results with the `whole` and `diff` edit formats,
-but using `whole` significantly increases costs and latency compared to `diff`.
-
-The latency of streaming back the entire updated copy of each edited file
-is a real challenge with the `whole` format.
-The GPT-3.5 models are quite responsive, and can
-stream back entire files at reasonable speed.
-Aider displays a progress bar and
-live diffs of the files as they stream in,
-which helps pass the time.
-
-The GPT-4 models are much slower, and waiting for even small files
-to be completely "retyped" on each request is probably unacceptable.
-`````
-
-## File: aider/website/docs/config.md
+## File: config.md
 `````markdown
 ---
 nav_order: 55
@@ -8544,1903 +6647,7 @@ AIDER_DARK_MODE=true
 {% include keys.md %}
 `````
 
-## File: aider/website/docs/ctags.md
-`````markdown
----
-title: Improving GPT-4's codebase understanding with ctags
-excerpt: Using ctags to build a "repository map" to increase GPT-4's ability to understand a large code base.
-highlight_image: /assets/robot-flowchart.png
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-{% endif %}
-
-# Improving GPT-4's codebase understanding with ctags
-
-![robot flowchat](/assets/robot-flowchart.png)
-
-
-## Updated
-
-Aider no longer uses ctags to build a repo map.
-Please see the newer article about
-[using tree-sitter to build a better repo map](https://aider.chat/docs/repomap.html).
-
--------
-
-GPT-4 is extremely useful for "self-contained" coding tasks,
-like generating brand new code or modifying a pure function
-that has no dependencies.
-
-But it's difficult to use GPT-4 to modify or extend
-a large, complex pre-existing codebase.
-To modify such code, GPT needs to understand the dependencies and APIs
-which interconnect its subsystems.
-Somehow we need to provide this "code context" to GPT
-when we ask it to accomplish a coding task. Specifically, we need to:
-
-  - Help GPT understand the overall codebase, so that it
-can decifer the meaning of code with complex dependencies and generate
-new code that respects and utilizes existing abstractions.
-  - Convey all of this "code context" to GPT in an
-efficient manner that fits within the 8k-token context window.
-
-To address these issues, `aider` now
-sends GPT a **concise map of your whole git repository**
-that includes
-all declared variables and functions with call signatures.
-This *repo map* is built automatically using `ctags`, which
-extracts symbol definitions from source files. Historically,
-ctags were generated and indexed by IDEs and editors to
-help humans search and navigate large codebases.
-Instead, we're going to use ctags to help GPT better comprehend, navigate
-and edit code in larger repos.
-
-To get a sense of how effective this can be, this
-[chat transcript](https://aider.chat/examples/add-test.html)
-shows GPT-4 creating a black box test case, **without being given
-access to the source code of the function being tested or any of the
-other code in the repo.**
-Using only the meta-data in the repo map, GPT is able to figure out how to
-call the method to be tested, as well as how to instantiate multiple
-class objects that are required to prepare for the test.
-
-To code with GPT-4 using the techniques discussed here:
-
-
-  - Install [aider](https://aider.chat/docs/install.html).
-  - Install universal ctags.
-  - Run `aider` inside your repo, and it should say "Repo-map: universal-ctags using 1024 tokens".
-
-## The problem: code context
-
-GPT-4 is great at "self contained" coding tasks, like writing or
-modifying a pure function with no external dependencies.
-GPT can easily handle requests like "write a
-Fibonacci function" or "rewrite the loop using list
-comprehensions", because they require no context beyond the code
-being discussed.
-
-Most real code is not pure and self-contained, it is intertwined with
-and depends on code from many different files in a repo.
-If you ask GPT to "switch all the print statements in class Foo to
-use the BarLog logging system", it needs to see the code in the Foo class
-with the prints, and it also needs to understand the project's BarLog
-subsystem.
-
-A simple solution is to **send the entire codebase** to GPT along with
-each change request. Now GPT has all the context! But this won't work
-for even moderately
-sized repos, because they won't fit into the 8k-token context window.
-
-A better approach is to be selective,
-and **hand pick which files to send**.
-For the example above, you could send the file that
-contains the Foo class
-and the file that contains the BarLog logging subsystem.
-This works pretty well, and is supported by `aider` -- you
-can manually specify which files to "add to the chat" you are having with GPT.
-
-But it's not ideal to have to manually identify the right
-set of files to add to the chat.
-And sending whole files is a bulky way to send code context,
-wasting the precious 8k context window.
-GPT doesn't need to see the entire implementation of BarLog,
-it just needs to understand it well enough to use it.
-You may quickly run out of context window if you
-send many files worth of code just to convey context.
-
-## Using a repo map to provide context
-
-The latest version of `aider` sends a **repo map** to GPT along with
-each change request. The map contains a list of all the files in the
-repo, along with the symbols which are defined in each file. Callables
-like functions and methods also include their signatures.
-
-Here's a
-sample of the map of the aider repo, just showing the maps of
-[main.py](https://github.com/Aider-AI/aider/blob/main/aider/main.py)
-and
-[io.py](https://github.com/Aider-AI/aider/blob/main/aider/io.py)
-:
-
-```
-aider/
-   ...
-   main.py:
-      function
-         main (args=None, input=None, output=None)
-      variable
-         status
-   ...
-   io.py:
-      class
-         FileContentCompleter
-         InputOutput
-      FileContentCompleter
-         member
-            __init__ (self, fnames, commands)
-            get_completions (self, document, complete_event)
-      InputOutput
-         member
-            __init__ (self, pretty, yes, input_history_file=None, chat_history_file=None, input=None, output=None)
-            ai_output (self, content)
-            append_chat_history (self, text, linebreak=False, blockquote=False)
-            confirm_ask (self, question, default="y")
-            get_input (self, fnames, commands)
-            prompt_ask (self, question, default=None)
-            tool (self, *messages, log_only=False)
-            tool_error (self, message)
-   ...
-```
-
-Mapping out the repo like this provides some benefits:
-
-  - GPT can see variables, classes, methods and function signatures from everywhere in the repo. This alone may give it enough context to solve many tasks. For example, it can probably figure out how to use the API exported from a module just based on the details shown in the map.
-  - If it needs to see more code, GPT can use the map to figure out by itself which files it needs to look at. GPT will then ask to see these specific files, and `aider` will automatically add them to the chat context (with user approval).
-
-Of course, for large repositories even just the map might be too large
-for the context window.  However, this mapping approach opens up the
-ability to collaborate with GPT-4 on larger codebases than previous
-methods.  It also reduces the need to manually curate which files to
-add to the chat context, empowering GPT to autonomously identify
-relevant files for the task at hand.
-
-## Using ctags to make the map
-
-Under the hood, `aider` uses
-[universal ctags](https://github.com/universal-ctags/ctags)
-to build the
-map. Universal ctags can scan source code written in many
-languages, and extract data about all the symbols defined in each
-file.
-
-Historically, ctags were generated and indexed by IDEs or code editors
-to make it easier for a human to search and navigate a
-codebase, find the implementation of functions, etc.
-Instead, we're going to use ctags to help GPT navigate and understand the codebase.
-
-Here is the type of output you get when you run ctags on source code. Specifically,
-this is the
-`ctags --fields=+S --output-format=json` output for the `main.py` file mapped above:
-
-```json
-{
-  "_type": "tag",
-  "name": "main",
-  "path": "aider/main.py",
-  "pattern": "/^def main(args=None, input=None, output=None):$/",
-  "kind": "function",
-  "signature": "(args=None, input=None, output=None)"
-}
-{
-  "_type": "tag",
-  "name": "status",
-  "path": "aider/main.py",
-  "pattern": "/^    status = main()$/",
-  "kind": "variable"
-}
-```
-
-The repo map is built using this type of `ctags` data,
-but formatted into the space
-efficient hierarchical tree format shown earlier.
-This is a format that GPT can easily understand
-and which conveys the map data using a
-minimal number of tokens.
-
-## Example chat transcript
-
-This
-[chat transcript](https://aider.chat/examples/add-test.html)
-shows GPT-4 creating a black box test case, **without being given
-access to the source code of the function being tested or any of the
-other code in the repo.** Instead, GPT is operating solely off
-the repo map.
-
-Using only the meta-data in the map, GPT is able to figure out how to call the method to be tested, as well as how to instantiate multiple class objects that are required to prepare for the test.
-
-GPT makes one reasonable mistake writing the first version of the test, but is
-able to quickly fix the issue after being shown the `pytest` error output.
-
-## Future work
-
-Just as "send the whole codebase to GPT with every request"
-is not an efficient solution to this problem,
-there are probably better approaches than
-"send the whole repo map with every request".
-Sending an appropriate subset of the repo map would help `aider` work
-better with even larger repositories which have large maps.
-
-Some possible approaches to reducing the amount of map data are:
-
-  - Distill the global map, to prioritize important symbols and discard "internal" or otherwise less globally relevant identifiers. Possibly enlist `gpt-3.5-turbo` to perform this distillation in a flexible and language agnostic way.
-  - Provide a mechanism for GPT to start with a distilled subset of the global map, and let it ask to see more detail about subtrees or keywords that it feels are relevant to the current coding task.
-  - Attempt to analyze the natural language coding task given by the user and predict which subset of the repo map is relevant. Possibly by analysis of prior coding chats within the specific repo. Work on certain files or types of features may require certain somewhat predictable context from elsewhere in the repo. Vector and keyword search against the chat history, repo map or codebase may help here.
-
-One key goal is to prefer solutions which are language agnostic or
-which can be easily deployed against most popular code languages.
-The `ctags` solution has this benefit, since it comes pre-built
-with support for most popular languages.
-I suspect that Language Server Protocol might be an even
-better tool than `ctags` for this problem.
-But it is more cumbersome to deploy for a broad
-array of languages.
-Users would need to stand up an LSP server for their
-specific language(s) of interest.
-
-## Try it out
-
-To use this experimental repo map feature:
-
-  - Install [aider](https://aider.chat/docs/install.html).
-  - Install ctags.
-  - Run `aider` inside your repo, and it should say "Repo-map: universal-ctags using 1024 tokens".
-`````
-
-## File: aider/website/docs/git.md
-`````markdown
----
-parent: More info
-nav_order: 100
-description: Aider is tightly integrated with git.
----
-
-# Git integration
-
-Aider works best with code that is part of a git repo.
-Aider is tightly integrated with git, which makes it easy to:
-
-  - Use the `/undo` command to instantly undo any AI changes that you don't like.
-  - Go back in the git history to review the changes that aider made to your code
-  - Manage a series of aider's changes on a git branch
-
-Aider uses git in these ways:
-
-- It asks to create a git repo if you launch it in a directory without one.
-- Whenever aider edits a file, it commits those changes with a descriptive commit message. This makes it easy to undo or review aider's changes. 
-- Aider takes special care before editing files that already have uncommitted changes (dirty files). Aider will first commit any preexisting changes with a descriptive commit message. 
-This keeps your edits separate from aider's edits, and makes sure you never lose your work if aider makes an inappropriate change.
-
-## In-chat commands
-
-Aider also allows you to use 
-[in-chat commands](/docs/usage/commands.html)
-to perform git operations:
-
-- `/diff` will show all the file changes since the last message you sent.
-- `/undo` will undo and discard the last change.
-- `/commit` to commit all dirty changes with a sensible commit message.
-- `/git` will let you run raw git commands to do more complex management of your git history.
-
-You can also manage your git history outside of aider with your preferred git tools.
-
-## Disabling git integration
-
-While it is not recommended, you can disable aider's use of git in a few ways:
-
-  - `--no-auto-commits` will stop aider from git committing each of its changes.
-  - `--no-dirty-commits` will stop aider from committing dirty files before applying its edits.
-  - `--no-git` will completely stop aider from using git on your files. You should ensure you are keeping sensible backups of the files you are working with.
-
-## Commit messages
-
-Aider sends the `--weak-model` a copy of the diffs and the chat history
-and asks it to produce a commit message.
-By default, aider creates commit messages which follow
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
-
-You can customize the
-[commit prompt](https://github.com/Aider-AI/aider/blob/main/aider/prompts.py#L5)
-with the `--commit-prompt` option.
-You can place that on the command line, or 
-[configure it via a config file or environment variables](https://aider.chat/docs/config.html).
-
-
-## Commit attribution
-
-Aider marks commits that it either authored or committed.
-
-- If aider authored the changes in a commit, they will have "(aider)" appended to the git author and git committer name metadata.
-- If aider simply committed changes (found in dirty files), the commit will have "(aider)" appended to the git committer name metadata.
-
-You can use `--no-attribute-author` and `--no-attribute-committer` to disable
-modification of the git author and committer name fields.
-
-Additionally, you can use the following options to prefix commit messages:
-
-- `--attribute-commit-message-author`: Prefix commit messages with 'aider: ' if aider authored the changes.
-- `--attribute-commit-message-committer`: Prefix all commit messages with 'aider: ', regardless of whether aider authored the changes or not.
-
-Both of these options are disabled by default, but can be useful for easily identifying changes made by aider.
-`````
-
-## File: aider/website/docs/install.md
-`````markdown
----
-title: Installation
-has_children: true
-nav_order: 20
-description: How to install and get started pair programming with aider.
----
-
-# Installation
-{: .no_toc }
-
-
-## Get started quickly with aider-install
-
-{% include get-started.md %}
-
-This will install aider in its own separate python environment.
-If needed, 
-aider-install will also install a separate version of python 3.12 to use with aider.
-
-Once aider is installed,
-there are also some [optional install steps](/docs/install/optional.html).
-
-See the [usage instructions](https://aider.chat/docs/usage.html) to start coding with aider.
-
-## One-liners
-
-These one-liners will install aider, along with python 3.12 if needed.
-They are based on the 
-[uv installers](https://docs.astral.sh/uv/getting-started/installation/).
-
-#### Windows
-
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://aider.chat/install.ps1 | iex"
-```
-
-#### Mac & Linux
-
-Use curl to download the script and execute it with sh:
-
-```bash
-curl -LsSf https://aider.chat/install.sh | sh
-```
-
-If your system doesn't have curl, you can use wget:
-
-```bash
-wget -qO- https://aider.chat/install.sh | sh
-```
-
-
-## Install with uv
-
-You can install aider with uv:
-
-```bash
-python -m pip install uv  # If you need to install uv
-uv tool install --force --python python3.12 aider-chat@latest
-```
-
-This will install uv using your existing python version 3.8-3.13,
-and use it to install aider.
-If needed, 
-uv will automatically install a separate python 3.12 to use with aider.
-
-Also see the
-[docs on other methods for installing uv itself](https://docs.astral.sh/uv/getting-started/installation/).
-
-## Install with pipx
-
-You can install aider with pipx:
-
-```bash
-python -m pip install pipx  # If you need to install pipx
-pipx install aider-chat
-```
-
-You can use pipx to install aider with python versions 3.9-3.12.
-
-Also see the
-[docs on other methods for installing pipx itself](https://pipx.pypa.io/stable/installation/).
-
-## Other install methods
-
-You can install aider with the methods described below, but one of the above
-methods is usually safer.
-
-#### Install with pip
-
-If you install with pip, you should consider
-using a 
-[virtual environment](https://docs.python.org/3/library/venv.html)
-to keep aider's dependencies separated.
-
-
-You can use pip to install aider with python versions 3.9-3.12.
-
-```bash
-python -m pip install -U --upgrade-strategy only-if-needed aider-chat
-```
-
-{% include python-m-aider.md %}
-
-#### Installing with package managers
-
-It's best to install aider using one of methods
-recommended above.
-While aider is available in a number of system package managers,
-they often install aider with incorrect dependencies.
-
-## Next steps...
-
-There are some [optional install steps](/docs/install/optional.html) you could consider.
-See the [usage instructions](https://aider.chat/docs/usage.html) to start coding with aider.
-`````
-
-## File: aider/website/docs/languages.md
-`````markdown
----
-parent: More info
-nav_order: 200
-description: Aider supports pretty much all popular coding languages.
----
-# Supported languages
-
-Aider should work well with most popular coding languages.
-This is because top LLMs are fluent in most mainstream languages,
-and familiar with popular libraries, packages and frameworks.
-
-Aider has specific support for linting many languages.
-By default, aider runs the built in linter any time a file is edited.
-If it finds syntax errors, aider will offer to fix them for you.
-This helps catch small code issues and quickly fix them.
-
-Aider also does code analysis to help
-the LLM navigate larger code bases by producing
-a [repository map](https://aider.chat/docs/repomap.html).
-Aider can currently produce repository maps for many popular
-mainstream languages, listed below.
-
-
-## How to add support for another language
-
-Aider should work quite well for other languages, even those
-without repo map or linter support.
-You should really try coding with aider before
-assuming it needs better support for your language.
-
-That said, if aider already has support for linting your language,
-then it should be possible to add repo map support.
-To build a repo map, aider needs the `tags.scm` file
-from the given language's tree-sitter grammar.
-If you can find and share that file in a 
-[GitHub issue](https://github.com/Aider-AI/aider/issues),
-then it may be possible to add repo map support.
-
-If aider doesn't support linting, it will be complicated to
-add linting and repo map support.
-That is because aider relies on 
-[py-tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages)
-to provide pre-packaged versions of tree-sitter
-parsers for many languages.
-
-Aider needs to be easy for users to install in many environments,
-and it is probably too complex to add dependencies on
-additional individual tree-sitter parsers.
-
-
-<!--[[[cog
-from aider.repomap import get_supported_languages_md
-cog.out(get_supported_languages_md())
-]]]-->
-
-| Language | File extension | Repo map | Linter |
-|:--------:|:--------------:|:--------:|:------:|
-| actionscript         | .as                  |          |   ✓    |
-| ada                  | .adb                 |          |   ✓    |
-| ada                  | .ads                 |          |   ✓    |
-| agda                 | .agda                |          |   ✓    |
-| arduino              | .ino                 |    ✓     |   ✓    |
-| asm                  | .asm                 |          |   ✓    |
-| asm                  | .s                   |          |   ✓    |
-| astro                | .astro               |          |   ✓    |
-| bash                 | .bash                |          |   ✓    |
-| bash                 | .sh                  |          |   ✓    |
-| bash                 | .zsh                 |          |   ✓    |
-| beancount            | .bean                |          |   ✓    |
-| bibtex               | .bib                 |          |   ✓    |
-| bicep                | .bicep               |          |   ✓    |
-| bitbake              | .bb                  |          |   ✓    |
-| bitbake              | .bbappend            |          |   ✓    |
-| bitbake              | .bbclass             |          |   ✓    |
-| c                    | .c                   |    ✓     |   ✓    |
-| c                    | .h                   |    ✓     |   ✓    |
-| cairo                | .cairo               |          |   ✓    |
-| capnp                | .capnp               |          |   ✓    |
-| chatito              | .chatito             |    ✓     |   ✓    |
-| clarity              | .clar                |          |   ✓    |
-| clojure              | .clj                 |          |   ✓    |
-| clojure              | .cljc                |          |   ✓    |
-| clojure              | .cljs                |          |   ✓    |
-| clojure              | .edn                 |          |   ✓    |
-| cmake                | .cmake               |          |   ✓    |
-| cmake                | CMakeLists.txt       |          |   ✓    |
-| commonlisp           | .cl                  |    ✓     |   ✓    |
-| commonlisp           | .lisp                |    ✓     |   ✓    |
-| cpon                 | .cpon                |          |   ✓    |
-| cpp                  | .cc                  |    ✓     |   ✓    |
-| cpp                  | .cpp                 |    ✓     |   ✓    |
-| cpp                  | .cxx                 |    ✓     |   ✓    |
-| cpp                  | .h++                 |    ✓     |   ✓    |
-| cpp                  | .hpp                 |    ✓     |   ✓    |
-| cpp                  | .hxx                 |    ✓     |   ✓    |
-| csharp               | .cs                  |    ✓     |   ✓    |
-| css                  | .css                 |          |   ✓    |
-| csv                  | .csv                 |          |   ✓    |
-| cuda                 | .cu                  |          |   ✓    |
-| cuda                 | .cuh                 |          |   ✓    |
-| d                    | .d                   |    ✓     |   ✓    |
-| dart                 | .dart                |    ✓     |   ✓    |
-| dockerfile           | Dockerfile           |          |   ✓    |
-| dtd                  | .dtd                 |          |   ✓    |
-| elisp                | .el                  |    ✓     |   ✓    |
-| elixir               | .ex                  |    ✓     |   ✓    |
-| elixir               | .exs                 |    ✓     |   ✓    |
-| elm                  | .elm                 |    ✓     |   ✓    |
-| erlang               | .erl                 |          |   ✓    |
-| erlang               | .hrl                 |          |   ✓    |
-| fennel               | .fnl                 |          |   ✓    |
-| firrtl               | .fir                 |          |   ✓    |
-| fish                 | .fish                |          |   ✓    |
-| fortran              | .f                   |          |   ✓    |
-| fortran              | .f03                 |          |   ✓    |
-| fortran              | .f08                 |          |   ✓    |
-| fortran              | .f90                 |          |   ✓    |
-| fortran              | .f95                 |          |   ✓    |
-| func                 | .fc                  |          |   ✓    |
-| gdscript             | .gd                  |          |   ✓    |
-| gitattributes        | .gitattributes       |          |   ✓    |
-| gitcommit            | .gitcommit           |          |   ✓    |
-| gitignore            | .gitignore           |          |   ✓    |
-| gleam                | .gleam               |    ✓     |   ✓    |
-| glsl                 | .frag                |          |   ✓    |
-| glsl                 | .glsl                |          |   ✓    |
-| glsl                 | .vert                |          |   ✓    |
-| gn                   | .gn                  |          |   ✓    |
-| gn                   | .gni                 |          |   ✓    |
-| go                   | .go                  |    ✓     |   ✓    |
-| gomod                | go.mod               |          |   ✓    |
-| gosum                | go.sum               |          |   ✓    |
-| groovy               | .groovy              |          |   ✓    |
-| gstlaunch            | .launch              |          |   ✓    |
-| hack                 | .hack                |          |   ✓    |
-| hare                 | .ha                  |          |   ✓    |
-| haskell              | .hs                  |          |   ✓    |
-| haxe                 | .hx                  |          |   ✓    |
-| hcl                  | .hcl                 |    ✓     |   ✓    |
-| hcl                  | .tf                  |    ✓     |   ✓    |
-| hcl                  | .tfvars              |    ✓     |   ✓    |
-| heex                 | .heex                |          |   ✓    |
-| hlsl                 | .hlsl                |          |   ✓    |
-| html                 | .htm                 |          |   ✓    |
-| html                 | .html                |          |   ✓    |
-| hyprlang             | .hypr                |          |   ✓    |
-| ispc                 | .ispc                |          |   ✓    |
-| janet                | .janet               |          |   ✓    |
-| java                 | .java                |    ✓     |   ✓    |
-| javascript           | .js                  |    ✓     |   ✓    |
-| javascript           | .jsx                 |    ✓     |   ✓    |
-| javascript           | .mjs                 |    ✓     |   ✓    |
-| jsdoc                | .jsdoc               |          |   ✓    |
-| json                 | .json                |          |   ✓    |
-| jsonnet              | .jsonnet             |          |   ✓    |
-| jsonnet              | .libsonnet           |          |   ✓    |
-| julia                | .jl                  |          |   ✓    |
-| kconfig              | Kconfig              |          |   ✓    |
-| kdl                  | .kdl                 |          |   ✓    |
-| kotlin               | .kt                  |    ✓     |   ✓    |
-| kotlin               | .kts                 |    ✓     |   ✓    |
-| latex                | .cls                 |          |   ✓    |
-| latex                | .sty                 |          |   ✓    |
-| latex                | .tex                 |          |   ✓    |
-| linkerscript         | .ld                  |          |   ✓    |
-| llvm                 | .ll                  |          |   ✓    |
-| lua                  | .lua                 |    ✓     |   ✓    |
-| luadoc               | .luadoc              |          |   ✓    |
-| luap                 | .luap                |          |   ✓    |
-| luau                 | .luau                |          |   ✓    |
-| magik                | .magik               |          |   ✓    |
-| make                 | .mk                  |          |   ✓    |
-| make                 | Makefile             |          |   ✓    |
-| markdown             | .markdown            |          |   ✓    |
-| markdown             | .md                  |          |   ✓    |
-| matlab               | .m                   |          |   ✓    |
-| matlab               | .mat                 |          |   ✓    |
-| mermaid              | .mermaid             |          |   ✓    |
-| meson                | meson.build          |          |   ✓    |
-| ninja                | .ninja               |          |   ✓    |
-| nix                  | .nix                 |          |   ✓    |
-| nqc                  | .nqc                 |          |   ✓    |
-| objc                 | .mm                  |          |   ✓    |
-| odin                 | .odin                |          |   ✓    |
-| org                  | .org                 |          |   ✓    |
-| pascal               | .pas                 |          |   ✓    |
-| pascal               | .pp                  |          |   ✓    |
-| pem                  | .pem                 |          |   ✓    |
-| perl                 | .pl                  |          |   ✓    |
-| perl                 | .pm                  |          |   ✓    |
-| pgn                  | .pgn                 |          |   ✓    |
-| php                  | .php                 |    ✓     |   ✓    |
-| po                   | .po                  |          |   ✓    |
-| po                   | .pot                 |          |   ✓    |
-| pony                 | .pony                |    ✓     |   ✓    |
-| powershell           | .ps1                 |          |   ✓    |
-| powershell           | .psm1                |          |   ✓    |
-| printf               | .printf              |          |   ✓    |
-| prisma               | .prisma              |          |   ✓    |
-| properties           | .properties          |    ✓     |   ✓    |
-| proto                | .proto               |          |   ✓    |
-| psv                  | .psv                 |          |   ✓    |
-| purescript           | .purs                |          |   ✓    |
-| pymanifest           | MANIFEST.in          |          |   ✓    |
-| python               | .py                  |    ✓     |   ✓    |
-| qmldir               | qmldir               |          |   ✓    |
-| qmljs                | .qml                 |          |   ✓    |
-| r                    | .R                   |    ✓     |   ✓    |
-| r                    | .r                   |    ✓     |   ✓    |
-| racket               | .rkt                 |    ✓     |   ✓    |
-| re2c                 | .re2c                |          |   ✓    |
-| readline             | .inputrc             |          |   ✓    |
-| requirements         | requirements.txt     |          |   ✓    |
-| ron                  | .ron                 |          |   ✓    |
-| rst                  | .rst                 |          |   ✓    |
-| ruby                 | .rb                  |    ✓     |   ✓    |
-| rust                 | .rs                  |    ✓     |   ✓    |
-| scala                | .sc                  |          |   ✓    |
-| scala                | .scala               |          |   ✓    |
-| scheme               | .scm                 |          |   ✓    |
-| scheme               | .ss                  |          |   ✓    |
-| scss                 | .scss                |          |   ✓    |
-| smali                | .smali               |          |   ✓    |
-| smithy               | .smithy              |          |   ✓    |
-| solidity             | .sol                 |    ✓     |   ✓    |
-| sparql               | .rq                  |          |   ✓    |
-| sql                  | .sql                 |          |   ✓    |
-| squirrel             | .nut                 |          |   ✓    |
-| starlark             | .bzl                 |          |   ✓    |
-| starlark             | BUILD                |          |   ✓    |
-| starlark             | WORKSPACE            |          |   ✓    |
-| svelte               | .svelte              |          |   ✓    |
-| swift                | .swift               |    ✓     |   ✓    |
-| tablegen             | .td                  |          |   ✓    |
-| tcl                  | .tcl                 |          |   ✓    |
-| thrift               | .thrift              |          |   ✓    |
-| toml                 | .toml                |          |   ✓    |
-| tsv                  | .tsv                 |          |   ✓    |
-| twig                 | .twig                |          |   ✓    |
-| typescript           | .ts                  |    ✓     |   ✓    |
-| typescript           | .tsx                 |    ✓     |   ✓    |
-| typst                | .typ                 |          |   ✓    |
-| udev                 | .rules               |    ✓     |   ✓    |
-| ungrammar            | .ungram              |          |   ✓    |
-| uxntal               | .tal                 |          |   ✓    |
-| verilog              | .sv                  |          |   ✓    |
-| verilog              | .v                   |          |   ✓    |
-| vhdl                 | .vhd                 |          |   ✓    |
-| vhdl                 | .vhdl                |          |   ✓    |
-| vim                  | .vim                 |          |   ✓    |
-| vim                  | .vimrc               |          |   ✓    |
-| vue                  | .vue                 |          |   ✓    |
-| wgsl                 | .wgsl                |          |   ✓    |
-| xcompose             | .XCompose            |          |   ✓    |
-| xml                  | .svg                 |          |   ✓    |
-| xml                  | .xml                 |          |   ✓    |
-| xml                  | .xsl                 |          |   ✓    |
-| yuck                 | .yuck                |          |   ✓    |
-| zig                  | .zig                 |          |   ✓    |
-
-<!--[[[end]]]-->
-`````
-
-## File: aider/website/docs/llms.md
-`````markdown
----
-title: Connecting to LLMs
-nav_order: 40
-has_children: true
-description: Aider can connect to most LLMs for AI pair programming.
----
-
-# Aider can connect to most LLMs
-{: .no_toc }
-
-[![connecting to many LLMs](/assets/llms.jpg)](https://aider.chat/assets/llms.jpg)
-
-
-## Best models
-{: .no_toc }
-
-Aider works best with these models, which are skilled at editing code:
-
-- [DeepSeek R1 and V3](/docs/llms/deepseek.html)
-- [Claude 3.7 Sonnet](/docs/llms/anthropic.html)
-- [OpenAI o1, o3-mini and GPT-4o](/docs/llms/openai.html)
-
-
-## Free models
-{: .no_toc }
-
-Aider works with a number of **free** API providers:
-
-- Google's [Gemini 1.5 Pro](/docs/llms/gemini.html) works with aider, with
-code editing capabilities similar to GPT-3.5.
-- You can use [Llama 3 70B on Groq](/docs/llms/groq.html) which is comparable to GPT-3.5 in code editing performance.
-- Cohere also offers free API access to their [Command-R+ model](/docs/llms/cohere.html), which works with aider as a *very basic* coding assistant.
-
-## Local models
-{: .no_toc }
-
-Aider can work also with local models, for example using [Ollama](/docs/llms/ollama.html).
-It can also access
-local models that provide an
-[Open AI compatible API](/docs/llms/openai-compat.html).
-
-## Use a capable model
-{: .no_toc }
-
-Check
-[Aider's LLM leaderboards](https://aider.chat/docs/leaderboards/)
-to see which models work best with aider.
-
-Be aware that aider may not work well with less capable models.
-If you see the model returning code, but aider isn't able to edit your files
-and commit the changes...
-this is usually because the model isn't capable of properly
-returning "code edits".
-Models weaker than GPT 3.5 may have problems working well with aider.
-`````
-
-## File: aider/website/docs/more-info.md
-`````markdown
----
-has_children: true
-nav_order: 85
----
-
-# More info
-
-See below for more info about aider, including some advanced topics.
-`````
-
-## File: aider/website/docs/repomap.md
-`````markdown
----
-parent: More info
-highlight_image: /assets/robot-ast.png
-nav_order: 300
-description: Aider uses a map of your git repository to provide code context to LLMs.
----
-
-# Repository map
-
-![robot flowchat](/assets/robot-ast.png)
-
-Aider
-uses a **concise map of your whole git repository**
-that includes
-the most important classes and functions along with their types and call signatures.
-This helps aider understand the code it's editing
-and how it relates to the other parts of the codebase.
-The repo map also helps aider write new code
-that respects and utilizes existing libraries, modules and abstractions
-found elsewhere in the codebase.
-
-## Using a repo map to provide context
-
-Aider sends a **repo map** to the LLM along with
-each change request from the user.
-The repo map contains a list of the files in the
-repo, along with the key symbols which are defined in each file.
-It shows how each of these symbols are defined, by including the critical lines of code for each definition.
-
-Here's a part of
-the repo map of aider's repo, for
-[base_coder.py](https://github.com/Aider-AI/aider/blob/main/aider/coders/base_coder.py)
-and
-[commands.py](https://github.com/Aider-AI/aider/blob/main/aider/commands.py)
-:
-
-```
-aider/coders/base_coder.py:
-⋮...
-│class Coder:
-│    abs_fnames = None
-⋮...
-│    @classmethod
-│    def create(
-│        self,
-│        main_model,
-│        edit_format,
-│        io,
-│        skip_model_availabily_check=False,
-│        **kwargs,
-⋮...
-│    def abs_root_path(self, path):
-⋮...
-│    def run(self, with_message=None):
-⋮...
-
-aider/commands.py:
-⋮...
-│class Commands:
-│    voice = None
-│
-⋮...
-│    def get_commands(self):
-⋮...
-│    def get_command_completions(self, cmd_name, partial):
-⋮...
-│    def run(self, inp):
-⋮...
-```
-
-Mapping out the repo like this provides some key benefits:
-
-  - The LLM can see classes, methods and function signatures from everywhere in the repo. This alone may give it enough context to solve many tasks. For example, it can probably figure out how to use the API exported from a module just based on the details shown in the map.
-  - If it needs to see more code, the LLM can use the map to figure out which files it needs to look at. The LLM can ask to see these specific files, and aider will offer to add them to the chat context.
-
-## Optimizing the map
-
-Of course, for large repositories even just the repo map might be too large
-for the LLM's context window.
-Aider solves this problem by sending just the **most relevant**
-portions of the repo map.
-It does this by analyzing the full repo map using
-a graph ranking algorithm, computed on a graph
-where each source file is a node and edges connect
-files which have dependencies.
-Aider optimizes the repo map by
-selecting the most important parts of the codebase
-which will
-fit into the active token budget.
-
-The token budget is
-influenced by the `--map-tokens` switch, which defaults to 1k tokens.
-Aider adjusts the size of the repo map dynamically based on the state of the chat. It will usually stay within that setting's value. But it does expand the repo map
-significantly at times, especially when no files have been added to the chat and aider needs to understand the entire repo as best as possible.
-
-
-The sample map shown above doesn't contain *every* class, method and function from those
-files.
-It only includes the most important identifiers,
-the ones which are most often referenced by other portions of the code.
-These are the key pieces of context that the LLM needs to know to understand
-the overall codebase.
-
-
-## More info
-
-Please check the
-[repo map article on aider's blog](https://aider.chat/2023/10/22/repomap.html)
-for more information on aider's repository map
-and how it is constructed.
-`````
-
-## File: aider/website/docs/scripting.md
-`````markdown
----
-parent: More info
-nav_order: 400
-description: You can script aider via the command line or python.
----
-
-# Scripting aider
-
-You can script aider via the command line or python.
-
-## Command line
-
-Aider takes a `--message` argument, where you can give it a natural language instruction.
-It will do that one thing, apply the edits to the files and then exit.
-So you could do:
-
-```bash
-aider --message "make a script that prints hello" hello.js
-```
-
-Or you can write simple shell scripts to apply the same instruction to many files:
-
-```bash
-for FILE in *.py ; do
-    aider --message "add descriptive docstrings to all the functions" $FILE
-done
-```
-
-Use `aider --help` to see all the 
-[command line options](/docs/config/options.html),
-but these are useful for scripting:
-
-```
---stream, --no-stream
-                      Enable/disable streaming responses (default: True) [env var:
-                      AIDER_STREAM]
---message COMMAND, --msg COMMAND, -m COMMAND
-                      Specify a single message to send GPT, process reply then exit
-                      (disables chat mode) [env var: AIDER_MESSAGE]
---message-file MESSAGE_FILE, -f MESSAGE_FILE
-                      Specify a file containing the message to send GPT, process reply,
-                      then exit (disables chat mode) [env var: AIDER_MESSAGE_FILE]
---yes                 Always say yes to every confirmation [env var: AIDER_YES]
---auto-commits, --no-auto-commits
-                      Enable/disable auto commit of GPT changes (default: True) [env var:
-                      AIDER_AUTO_COMMITS]
---dirty-commits, --no-dirty-commits
-                      Enable/disable commits when repo is found dirty (default: True) [env
-                      var: AIDER_DIRTY_COMMITS]
---dry-run, --no-dry-run
-                      Perform a dry run without modifying files (default: False) [env var:
-                      AIDER_DRY_RUN]
---commit              Commit all pending changes with a suitable commit message, then exit
-                      [env var: AIDER_COMMIT]
-```
-
-
-## Python
-
-You can also script aider from python:
-
-```python
-from aider.coders import Coder
-from aider.models import Model
-
-# This is a list of files to add to the chat
-fnames = ["greeting.py"]
-
-model = Model("gpt-4-turbo")
-
-# Create a coder object
-coder = Coder.create(main_model=model, fnames=fnames)
-
-# This will execute one instruction on those files and then return
-coder.run("make a script that prints hello world")
-
-# Send another instruction
-coder.run("make it say goodbye")
-
-# You can run in-chat "/" commands too
-coder.run("/tokens")
-
-```
-
-See the
-[Coder.create() and Coder.__init__() methods](https://github.com/Aider-AI/aider/blob/main/aider/coders/base_coder.py)
-for all the supported arguments.
-
-It can also be helpful to set the equivalent of `--yes` by doing this:
-
-```
-from aider.io import InputOutput
-io = InputOutput(yes=True)
-# ...
-coder = Coder.create(model=model, fnames=fnames, io=io)
-```
-
-{: .note }
-The python scripting API is not officially supported or documented,
-and could change in future releases without providing backwards compatibility.
-`````
-
-## File: aider/website/docs/troubleshooting.md
-`````markdown
----
-nav_order: 60
-has_children: true
-description: How to troubleshoot problems with aider and get help.
----
-
-# Troubleshooting
-
-Below are some approaches for troubleshooting problems with aider.
-
-{% include help.md %}
-`````
-
-## File: aider/website/docs/unified-diffs.md
-`````markdown
----
-title: Unified diffs make GPT-4 Turbo 3X less lazy
-excerpt: GPT-4 Turbo has a problem with lazy coding, which can be signiciantly improved by asking for code changes formatted as unified diffs.
-highlight_image: /assets/benchmarks-udiff.jpg
-nav_exclude: true
----
-{% if page.date %}
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}, by Paul Gauthier
-</p>
-{% endif %}
-
-# Unified diffs make GPT-4 Turbo 3X less lazy
-
-![robot flowchart](/assets/benchmarks-udiff.svg)
-
-Aider now asks GPT-4 Turbo to use
-[unified diffs](#choose-a-familiar-editing-format)
-to edit your code.
-This dramatically improves GPT-4 Turbo's performance on a
-challenging
-new benchmark 
-and significantly reduces its bad habit of "lazy" coding,
-where it writes
-code with comments
-like "...add logic here...".
-
-Aider's new "laziness" benchmark suite 
-is designed to both provoke and quantify lazy coding.
-It consists of
-89 python refactoring tasks
-which tend to make GPT-4 Turbo write lazy comments like
-"...include original method body...".
-
-This new laziness benchmark produced the following results with `gpt-4-1106-preview`:
-
-- **GPT-4 Turbo only scored 20% as a baseline** using aider's existing "SEARCH/REPLACE block" edit format. It outputs "lazy comments" on 12 of the tasks.
-- **Aider's new unified diff edit format raised the score to 61%**. Using this format reduced laziness by 3X, with GPT-4 Turbo only using lazy comments on 4 of the tasks.
-- **It's worse to add a prompt that says the user is blind, has no hands, will tip $2000 and fears truncated code trauma.** Widely circulated "emotional appeal" folk remedies 
-produced worse benchmark scores
-for both the baseline SEARCH/REPLACE and new unified diff editing formats.
-
-The older `gpt-4-0613` also did better on the laziness benchmark using unified diffs:
-
-- **The June GPT-4's baseline was 26%** using aider's existing "SEARCH/REPLACE block" edit format.
-- **Aider's new unified diff edit format raised June GPT-4's score to 59%**. 
-- The benchmark was designed to use large files, and
-28% of them are too large to fit in June GPT-4's 8k context window.
-This puts a hard ceiling of 72% on how well the June model could possibly score.
-
-With unified diffs, GPT acts more like it's writing textual data intended to be read by a program,
-not talking to a person.
-Diffs are
-usually
-consumed by the
-[patch](https://www.gnu.org/software/diffutils/manual/html_node/Merging-with-patch.html)
-program, which is fairly rigid.
-This seems to encourage rigor, making
-GPT less likely to
-leave informal editing instructions in comments
-or be lazy about writing all the needed code.
-
-Aider's new unified diff editing format
-outperforms other solutions I evaluated by a wide margin.
-I explored many other approaches including:
-prompts about being tireless and diligent,
-OpenAI's function/tool calling capabilities,
-numerous variations on aider's existing editing formats,
-line number based formats
-and other diff-like formats.
-The results shared here reflect
-an extensive investigation and benchmark evaluations of many approaches.
-
-The rest of this article will describe
-aider's new editing format and refactoring benchmark.
-It will highlight some key design decisions,
-and evaluate their significance using ablation experiments.
-
-
-## Unified diff editing format
-
-The design and implementation of aider's new unified diff editing format
-helped clarify some general principles
-for GPT-4 code editing:
-
-- FAMILIAR - Choose an edit format that GPT is already familiar with.
-- SIMPLE - Choose a simple format that avoids escaping, syntactic overhead and brittle specifiers like line numbers or line counts.
-- HIGH LEVEL - Encourage GPT to structure edits as new versions of substantive code blocks (functions, methods, etc), not as a series of surgical/minimal changes to individual lines of code.
-- FLEXIBLE - Strive to be maximally flexible when interpreting GPT's edit instructions.
-
-A helpful shortcut here is to have empathy for GPT, and imagine you
-are the one being asked to specify code edits.
-Would you want to hand type a properly escaped json data structure
-to invoke surgical insert, delete, replace operations on specific code line numbers?
-Do you want to use a brittle format, where any mistake
-causes an error that discards all your work?
-
-GPT is quantitatively better at code editing when you reduce the
-burden of formatting edits by using a familiar, simple, high level
-and flexible editing format.
-
-### Choose a familiar editing format
-
-Unified diffs are perhaps the most common way to show
-code edits, because it's the 
-default output format of `git diff`:
-
-```diff
---- a/greeting.py
-+++ b/greeting.py
-@@ -1,5 +1,5 @@
- def main(args):
-     # show a greeting
--    print("Hello!")
-+    print("Goodbye!")
-     return
-```
-
-Choosing such a popular format means that GPT has
-seen *many* examples in its training data.
-It's been trained to generate
-text that conforms to the unified diff syntax.
-
-### Use a simple editing format
-
-Aider's [previous benchmark results](https://aider.chat/docs/benchmarks.html) made
-it clear that simple editing formats
-work best.
-Even though OpenAI provides extensive support for
-structured formats like json and function calls,
-GPT is worse at editing code if you use them.
-I repeated these and other similar benchmarks against GPT-4 Turbo,
-and again reached these same conclusions.
-
-Informally, this is probably because stuffing *source code* into JSON is complicated
-and error prone.
-Wrapping the python code
-`print("On Windows use \"C:\\\"")`
-as valid json is pretty painful and error prone.
-Due to escaping issues GPT's code is often syntactically incorrect when it's
-unpacked from JSON,
-or the JSON decode just fails entirely.
-
-On the other hand, the core of the unified diff format is very simple.
-You include a hunk of the file that needs to be changed,
-with every line prefixed by a character
-to indicate unchanged, new or deleted lines.
-A unified diff looks pretty much like the code it is modifying.
-
-The one complicated piece is the line numbers found at the start
-of each hunk. They look something like this: `@@ -2,4 +3,5 @@`.
-GPT is terrible at working with source code line numbers.
-This is a general observation about *any* use of line
-numbers in editing formats,
-backed up by many quantitative benchmark experiments.
-
-You've probably ignored the line numbers in every diff you've seen,
-because the diffs usually still make sense without them.
-Aider tells GPT not to include line numbers,
-and just interprets each hunk from the unified diffs
-as a search and replace operation:
-
-This diff:
-
-```diff
-@@ ... @@
- def main(args):
-     # show a greeting
--    print("Hello!")
-+    print("Goodbye!")
-     return
-```
-
-Means we need to search the file for the
-*space* and *minus* `-` lines:
-
-```python
-def main(args):
-    # show a greeting
-    print("Hello!")
-    return
-```
-
-And replace them with the *space* and *plus* `+` lines:
-
-```python
-def main(args):
-    # show a greeting
-    print("Goodbye!")
-    return
-```
-
-Simple, right?
-
-### Encourage high level edits
-
-The example unified diffs we've seen so far have all been single line changes,
-which makes them pretty easy to read and understand.
-Consider this slightly more complex change, which renames the variable `n` to
-`number`:
-
-```diff
-@@ ... @@
--def factorial(n):
-+def factorial(number):
--    if n == 0:
-+    if number == 0:
-         return 1
-     else:
--        return n * factorial(n-1)
-+        return number * factorial(number-1)
-```
-
-The following "high level diff" of the same
-change is not as succinct as the minimal diff above,
-but it is much easier to see two different coherent versions of the
-`factorial()` function.
-
-```diff
-@@ ... @@
--def factorial(n):
--    if n == 0:
--        return 1
--    else:
--        return n * factorial(n-1)
-+def factorial(number):
-+    if number == 0:
-+        return 1
-+    else:
-+        return number * factorial(number-1)
-```
-
-Aider's system prompt encourages
-GPT to produce these high level diffs.
-This makes GPT better at producing correct diffs, which can be successfully
-applied to the original file.
-
-**Experiments without "high level diff" prompting
-produce a 30-50% increase in editing errors,**
-where diffs fail to apply or apply incorrectly and
-produce invalid code.
-When a patch fails, aider needs to ask GPT for a corrected version of the diff.
-This takes time, costs tokens and sometimes fails to produce a successful edit
-even after multiple retries.
-
-There are probably a couple of reasons why high level diffs
-help:
-
-- It's easier to produce diffs that both correctly match the original code and correctly produce the intended new code. There is less risk of GPT getting confused, compared to generating a series of surgical edits that interleave lines of old and new code.
-- High level hunks often contain more lines than a surgical hunk, so they are less likely to accidentally match unrelated parts of the code. This is helpful because GPT can't reliably give us line numbers to specify exactly where in the file to make changes.
-
-### Be flexible when applying edits
-
-GPT frequently makes imperfect diffs that won't apply cleanly.
-They exhibit a variety of problems:
-
-- GPT forgets things like comments, docstrings, blank lines, etc. Or it skips over some code that it doesn't intend to change.
-- GPT forgets the leading *plus* `+` character to mark novel lines that it wants to add to the file. It incorrectly includes them with a leading *space* as if they were already there.
-- GPT outdents all of the code, removing all the leading white space which is shared across the lines. So a chunk of deeply indented code is shown in a diff with only the leading white space that changes between the lines in the chunk.
-- GPT jumps ahead to show edits to a different part of the file without starting a new hunk with a `@@ ... @@` divider.
-
-As an example of the first issue, consider this source code:
-
-```python
-import sys
-
-def main(args):
-    # show a greeting
-    print("Hello!")
-    return
-
-main(sys.argv[1:])
-```
-
-**The diff below is missing the "show a greeting" comment line**,
-and represents a common type of mistake GPT might make.
-When we search for the *minus* `-` lines, we won't find them
-in the original file
-because of the missing comment.
-
-
-```diff
-@@ ... @@
--def main(args):
--    print("Hello!")
--    return
-+def main(args):
-+    print("Goodbye!")
-+    return
-```
-
-
-Aider tries to be very flexible when applying diffs,
-in order to handle defects.
-If a hunk doesn't apply cleanly, aider uses a number of strategies:
-
-- Normalize the hunk, by taking the *minus* `-` and *space* lines as one version of the hunk and the *space* and *plus* `+` lines as a second version and doing an actual unified diff on them.
-- Try and discover new lines that GPT is trying to add but which it forgot to mark with *plus* `+` markers. This is done by diffing the *minus* `-` and *space* lines back against the original file.
-- Try and apply the hunk using "relative leading white space", so we can match and patch correctly even if the hunk has been uniformly indented or outdented.
-- Break a large hunk apart into an overlapping sequence of smaller hunks, which each contain only one contiguous run of *plus* `+` and *minus* `-` lines. Try and apply each of these sub-hunks independently.
-- Vary the size and offset of the "context window" of *space*  lines from the hunk that are used to localize the edit to a specific part of the file.
-- Combine the above mechanisms to progressively become more permissive about how to apply the hunk.
-
-These flexible patching strategies are critical, and 
-removing them
-radically increases the number of hunks which fail to apply.
-**Experiments where flexible patching is disabled show a 9X increase in editing errors** on aider's original Exercism benchmark.
-
-## Refactoring benchmark
-
-Aider has long used a
-[benchmark suite based on 133 Exercism python exercises](https://aider.chat/2023/07/02/benchmarks.html).
-But these are mostly small coding problems,
-usually requiring only a few dozen lines of code.
-GPT-4 Turbo is typically only lazy on 2-3 of these exercises:
-the ones with the most code and which involve refactoring.
-
-Based on this observation, I set out to build a benchmark based on refactoring
-a non-trivial amount of code found in fairly large files.
-To do this, I used python's `ast` module to analyze
-[9 popular open source python repositories](https://github.com/Aider-AI/refactor-benchmark)
-to identify challenging refactoring tasks.
-The goal was to find:
-
-- Source files that contain classes with non-trivial methods, having 100-250+ AST nodes in their implementation.
-- Focus on methods that are part of a larger class, which has at least twice as much code as the method itself.
-- Select methods that don't use their `self` parameter, so they can be trivially refactored out of the class.
-
-We can then turn each of these source files into a task for the benchmark,
-where we ask GPT to do something like:
-
-> Refactor the `_set_csrf_cookie` method in the `CsrfViewMiddleware` class to be a stand alone, top level function.
-> Name the new function `_set_csrf_cookie`, exactly the same name as the existing method.
-> Update any existing `self._set_csrf_cookie` calls to work with the new `_set_csrf_cookie` function.
-
-A [simple python AST scanning script](https://github.com/Aider-AI/aider/blob/main/benchmark/refactor_tools.py)
-found 89 suitable files
-and packaged them up as benchmark tasks.
-Each task has a test
-that checks if the refactor
-was performed roughly correctly:
-
-- The updated source file must parse as valid python, to detect misapplied edits which produce invalid code.
-- The target method must now exist as a top-level function in the file.
-- This new top-level function must contain approximately the same number of AST nodes as the original class method. This ensures that GPT didn't elide code and replace it with comments.
-- The original class must still be present in the file, and it must be smaller by about the number of AST nodes in the method which was removed. This helps confirm that the method was removed from the class, without other significant modifications.
-
-To be clear, this is not a rigorous test that the refactor was performed correctly.
-But it does serve as a basic sanity check that the refactor was essentially done as a cut & paste, without eliding any code as comments.
-And it correlates well with other laziness metrics
-gathered during benchmarking like the
-introduction of new comments that contain "...".
-
-The result is a pragmatic
-[benchmark suite that provokes, detects and quantifies GPT coding laziness](https://github.com/Aider-AI/refactor-benchmark).
-
-
-
-## Conclusions and future work
-
-Based on the refactor benchmark results,
-aider's new unified diff format seems
-to dramatically increase GPT-4 Turbo's skill at more complex coding tasks.
-It also seems very effective at reducing the lazy coding
-which has been widely noted as a problem with GPT-4 Turbo.
-
-Unified diffs was one of the very first edit formats I tried
-when originally building aider.
-I think a lot of other AI coding assistant projects have also
-tried going down this path.
-It seems like any naive or direct use of structured diff formats
-is pretty much doomed to failure.
-But the techniques described here and
-incorporated into aider provide
-a highly effective way to harness GPT's knowledge of unified diffs.
-
-There could be significant benefits to
-fine tuning models on
-aider's simple, high level style of unified diffs.
-Dropping line numbers from the hunk headers and focusing on diffs of
-semantically coherent chunks of code
-seems to be an important part of successful GPT code editing
-(besides the relentless focus on flexibly applying edits).
-Most LLMs will have already seen plenty of unified diffs
-in their normal training data, and so should be
-amenable to fining tuning towards this
-particular diff style.
-`````
-
-## File: aider/website/docs/usage.md
-`````markdown
----
-nav_order: 30
-has_children: true
-description: How to use aider to pair program with AI and edit code in your local git repo.
----
-
-# Usage
-
-Run `aider` with the source code files you want to edit.
-These files will be "added to the chat session", so that
-aider can see their
-contents and edit them for you.
-They can be existing files or the name of files you want
-aider to create for you.
-
-```
-aider <file1> <file2> ...
-```
-
-At the aider `>` prompt, ask for code changes and aider
-will edit those files to accomplish your request.
-
-
-```
-$ aider factorial.py
-
-Aider v0.37.1-dev
-Models: gpt-4o with diff edit format, weak model gpt-3.5-turbo
-Git repo: .git with 258 files
-Repo-map: using 1024 tokens
-Use /help to see in-chat commands, run with --help to see cmd line args
-───────────────────────────────────────────────────────────────────────
-> Make a program that asks for a number and prints its factorial
-
-...
-```
-
-{% include help-tip.md %}
-
-## Adding files
-
-To edit files, you need to "add them to the chat".
-Do this
-by naming them on the aider command line.
-Or, you can use the in-chat
-`/add` command to add files.
-
-
-Only add the files that need to be edited for your task.
-Don't add a bunch of extra files.
-If you add too many files, the LLM can get overwhelmed
-and confused (and it costs more tokens).
-Aider will automatically
-pull in content from related files so that it can
-[understand the rest of your code base](https://aider.chat/docs/repomap.html).
-
-You can use aider without adding any files,
-and it will try to figure out which files need to be edited based
-on your requests.
-
-{: .tip }
-You'll get the best results if you think about which files need to be
-edited. Add **just** those files to the chat. Aider will include
-relevant context from the rest of your repo.
-
-## LLMs
-
-{% include works-best.md %}
-
-```
-# o3-mini
-$ aider --model o3-mini --api-key openai=<key>
-
-# Claude 3.7 Sonnet
-$ aider --model sonnet --api-key anthropic=<key>
-```
-
-Or you can run `aider --model XXX` to launch aider with
-another model.
-During your chat you can switch models with the in-chat
-`/model` command.
-
-## Making changes
-
-Ask aider to make changes to your code.
-It will show you some diffs of the changes it is making to
-complete you request.
-[Aider will git commit all of its changes](/docs/git.html),
-so they are easy to track and undo.
-
-You can always use the `/undo` command to undo AI changes that you don't
-like.
-`````
-
-## File: benchmark/README.md
-`````markdown
-# Aider benchmark harness
-
-Aider uses benchmarks to quantitatively measure how well it works
-with various LLMs.
-This directory holds the harness and tools needed to run the benchmarking suite.
-
-## Background
-
-The benchmark is based on the [Exercism](https://github.com/exercism/python) coding exercises.
-This
-benchmark evaluates how effectively aider and LLMs can translate a
-natural language coding request into executable code saved into
-files that pass unit tests.
-It provides an end-to-end evaluation of not just
-the LLM's coding ability, but also its capacity to *edit existing code*
-and *format those code edits* so that aider can save the
-edits to the local source files.
-
-See [this writeup for a longer discussion about the benchmark](https://aider.chat/2024/12/21/polyglot.html).
-
-The benchmark is intended to be run *inside a docker container*.
-This is because the benchmarking harness will be
-taking code written by an LLM
-and executing it without any human review or supervision!
-The LLM could generate dangerous python that harms your system, like this: `import os; os.system("sudo rm -rf /")`.
-Running inside a docker container helps limit the damage that could be done.
-
-## Usage
-
-There are 3 main tasks involved in benchmarking aider:
-
-1. Install and setup for benchmarking.
-
-2. Run the benchmark to measure performance across all the exercises.
-
-3. Generate a summary report of how many of the exercises succeeded or failed.
-
-### Setup for benchmarking
-
-First, prepare all the groundwork for running the benchmarks.
-These steps only need to be done once.
-
-```
-# Clone the aider repo
-git clone https://github.com/Aider-AI/aider.git
-
-# Create the scratch dir to hold benchmarking results inside the main aider dir:
-cd aider
-mkdir tmp.benchmarks
-
-# Clone the repo with the exercises
-git clone https://github.com/Aider-AI/polyglot-benchmark tmp.benchmarks/polyglot-benchmark
-
-# Build the docker container
-./benchmark/docker_build.sh
-```
-
-### Running the benchmark
-
-Launch the docker container and run the benchmark inside it:
-
-```
-# Launch the docker container
-./benchmark/docker.sh
-
-# Inside the container, install aider as a development build.
-# This way you're running the code that you cloned above, including any local changes.
-pip install -e .[dev]
-
-# Run the benchmark:
-./benchmark/benchmark.py a-helpful-name-for-this-run --model gpt-3.5-turbo --edit-format whole --threads 10 --exercises-dir polyglot-benchmark
-```
-
-The above will create a folder `tmp.benchmarks/YYYY-MM-DD-HH-MM-SS--a-helpful-name-for-this-run` with benchmarking results.
-Run like this, the script will run all the exercises in a random order.
-
-You can run `./benchmark/benchmark.py --help` for a list of all the arguments, but here are the most useful to keep in mind:
-
-- `--model` is the name of the model, same as you would pass directly to `aider`.
-- `--edit-format` is the name of the edit format, same as you would pass directly to `aider`. When working with an experimental LLM, I recommend starting with `whole`
-- `--threads` specifies how many exercises to benchmark in parallel. Start with a single thread if you are working out the kinks on your benchmarking setup or working with a new model, etc. Once you are getting reliable results, you can speed up the process by running with more threads. 10 works well against the OpenAI APIs.
-- `--num-tests` specifies how many of the tests to run before stopping. This is another way to start gently as you debug your benchmarking setup.
-- `--keywords` filters the tests to run to only the ones whose name match the supplied argument (similar to `pytest -k xxxx`).
-
-### Benchmark report
-
-You can generate stats about any benchmark, including ones which are still running.
-You don't need to run this inside the docker container, as it is just
-collecting stats not executing unsafe python.
-
-```
-# Generate stats for a specific benchmarking directory
-./benchmark/benchmark.py --stats tmp.benchmarks/YYYY-MM-DD-HH-MM-SS--a-helpful-name-for-this-run
-```
-
-The benchmark report is a yaml record with statistics about the run:
-
-```yaml
-- dirname: 2024-07-04-14-32-08--claude-3.5-sonnet-diff-continue
-  test_cases: 225
-  model: claude-3.5-sonnet
-  edit_format: diff
-  commit_hash: 35f21b5
-  pass_rate_1: 57.1
-  pass_rate_2: 77.4
-  percent_cases_well_formed: 99.2
-  error_outputs: 23
-  num_malformed_responses: 4
-  num_with_malformed_responses: 1
-  user_asks: 2
-  lazy_comments: 0
-  syntax_errors: 1
-  indentation_errors: 0
-  exhausted_context_windows: 0
-  test_timeouts: 1
-  command: aider --sonnet
-  date: 2024-07-04
-  versions: 0.42.1-dev
-  seconds_per_case: 17.6
-  total_cost: 3.6346
-```
-
-The key statistics are the `pass_rate_#` entries, which report the
-percent of the tasks which had all tests passing.
-There will be multiple of these pass rate stats,
-depending on the value of the `--tries` parameter.
-
-The yaml also includes all the settings which were in effect for the benchmark run.
-It also reports the git hash of the repo at the time that the benchmark was
-run, with `(dirty)` if there were uncommitted changes.
-It's good practice to commit the repo before starting a benchmark run.
-This way the `model`, `edit_format` and `commit_hash`
-should be enough to reliably reproduce any benchmark run.
-
-You can see examples of the benchmark report yaml in the
-[aider leaderboard data files](https://github.com/Aider-AI/aider/blob/main/aider/website/_data/).
-
-
-## Limitations, notes
-
-- Contributions of benchmark results are welcome! Submit results by opening a PR with edits to the
-[aider leaderboard data files](https://github.com/Aider-AI/aider/blob/main/aider/website/_data/).
-- These scripts are not intended for use by typical aider end users.
-- Some of these tools are written as `bash` scripts, so it will be hard to use them on Windows.
-`````
-
-## File: CONTRIBUTING.md
-`````markdown
-# Contributing to the Project
-
-We welcome contributions in the form of bug reports, feature requests,
-and pull requests (PRs). This document describes how you can
-contribute.
-
-## Bug Reports and Feature Requests
-
-Please submit bug reports and feature requests as GitHub issues. This
-helps us to keep track of them and discuss potential solutions or
-enhancements.
-
-## LLM Benchmark Results
-
-Contributions of
-[LLM benchmark results](https://aider.chat/docs/leaderboards/)
-are welcome!
-See the
-[benchmark README](https://github.com/Aider-AI/aider/blob/main/benchmark/README.md)
-for information on running aider's code editing benchmarks.
-Submit results by opening a PR with edits to the
-[benchmark results data files](https://github.com/Aider-AI/aider/blob/main/aider/website/_data/).
-
-
-## Pull Requests
-
-We appreciate your pull requests. For small changes, feel free to
-submit a PR directly. If you are considering a large or significant
-change, please discuss it in a GitHub issue before submitting the
-PR. This will save both you and the maintainers time, and it helps to
-ensure that your contributions can be integrated smoothly.
-
-## Licensing
-
-Before contributing a PR, please review our
-[Individual Contributor License Agreement](https://aider.chat/docs/legal/contributor-agreement.html).
-All contributors will be asked to complete the agreement as part of the PR process.
-
-## Setting up a Development Environment
-
-### Clone the Repository
-
-```
-git clone https://github.com/Aider-AI/aider.git
-cd aider
-```
-
-### Create a Virtual Environment
-
-It is recommended to create a virtual environment outside of the repository to keep your development environment isolated.
-
-#### Using `venv` (Python 3.9 and later)
-
-```
-python -m venv /path/to/venv
-```
-
-### Activate the Virtual Environment
-
-#### On Windows
-
-```
-/path/to/venv/Scripts/activate
-```
-
-#### On Unix or macOS
-
-```
-source /path/to/venv/bin/activate
-```
-
-### Install the Project in Editable Mode
-
-This step allows you to make changes to the source code and have them take effect immediately without reinstalling the package.
-
-```
-pip install -e .
-```
-
-### Install the Project Dependencies
-
-```
-pip install -r requirements.txt
-```
-
-For development, at least install the development dependencies:
-
-```
-pip install -r requirements/requirements-dev.txt
-```
-
-Consider installing other optional dependencies from the `requirements/` directory, if your development work needs them. 
-
-Note that these dependency files are generated by `./scripts/pip-compile.sh` and then committed. See [Managing Dependencies](#managing-dependencies).
-
-### Install Pre-commit Hooks (Optional)
-
-The project uses pre-commit hooks for code formatting and linting. If you want to install and use these hooks, run:
-
-```
-pre-commit install
-```
-
-This will automatically run the pre-commit hooks when you commit changes to the repository.
-
-Now you should have a fully functional development environment for the Aider project. You can start making changes, running tests, and contributing to the project.
-
-### Handy Opinionated Setup Commands for MacOS / Linux
-
-Here's an example of following the setup instructions above, for your copy/paste pleasure if your system works the same. Start in the project directory.
-
-```
-python3 -m venv ../aider_venv \
- && source ../aider_venv/bin/activate \
- && pip3 install -e . \
- && pip3 install -r requirements.txt \
- && pip3 install -r requirements/requirements-dev.txt
-```
-
-### Running Tests
-
-Just run `pytest`.
-
-### Building the Docker Image
-
-The project includes a `Dockerfile` for building a Docker image. You can build the image by running:
-
-```
-docker build -t aider -f docker/Dockerfile .
-```
-
-### Building the Documentation
-
-The project's documentation is built using Jekyll and hosted on GitHub Pages. To build the documentation locally, follow these steps:
-
-1. Install Ruby and Bundler (if not already installed).
-2. Navigate to the `aider/website` directory.
-3. Install the required gems:
-   ```
-   bundle install
-   ```
-4. Build the documentation:
-   ```
-   bundle exec jekyll build
-   ```
-5. Preview the website while editing (optional):
-   ```
-   bundle exec jekyll serve
-   ```
-
-The built documentation will be available in the `aider/website/_site` directory.
-
-## Coding Standards
-
-### Python Compatibility
-
-Aider supports Python versions 3.9, 3.10, 3.11, and 3.12. When contributing code, ensure compatibility with these supported Python versions.
-
-### Code Style
-
-The project follows the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for Python code, with a maximum line length of 100 characters. Additionally, the project uses [isort](https://pycqa.github.io/isort/) and [Black](https://black.readthedocs.io/en/stable/) for sorting imports and code formatting, respectively. Please install the pre-commit hooks to automatically format your code before committing changes.
-
-### No Type Hints
-
-The project does not use type hints.
-
-### Testing
-
-The project uses [pytest](https://docs.pytest.org/en/latest/) for running unit tests. The test files are located in the `aider/tests` directory and follow the naming convention `test_*.py`.
-
-#### Running Tests
-
-To run the entire test suite, use the following command from the project root directory:
-
-```
-pytest
-```
-
-You can also run specific test files or test cases by providing the file path or test name:
-
-```
-pytest tests/basic/test_coder.py
-pytest tests/basic/test_coder.py::TestCoder::test_specific_case
-```
-
-#### Continuous Integration
-
-The project uses GitHub Actions for continuous integration. The testing workflows are defined in the following files:
-
-- `.github/workflows/ubuntu-tests.yml`: Runs tests on Ubuntu for Python versions 3.9 through 3.12.
-- `.github/workflows/windows-tests.yml`: Runs that on Windows
-
-These workflows are triggered on push and pull request events to the `main` branch, ignoring changes to the `aider/website/**` and `README.md` files.
-
-#### Docker Build and Test
-
-The `.github/workflows/docker-build-test.yml` workflow is used to build a Docker image for the project on every push or pull request event to the `main` branch. It checks out the code, sets up Docker, logs in to DockerHub, and then builds the Docker image without pushing it to the registry.
-
-#### Writing Tests
-
-When contributing new features or making changes to existing code, ensure that you write appropriate tests to maintain code coverage. Follow the existing patterns and naming conventions used in the `aider/tests` directory.
-
-If you need to mock or create test data, consider adding it to the test files or creating separate fixtures or utility functions within the `aider/tests` directory.
-
-#### Test Requirements
-
-The project uses `pytest` as the testing framework, which is installed as a development dependency. To install the development dependencies, run the following command:
-
-```
-pip install -r requirements-dev.txt
-```
-
-### Managing Dependencies
-
-When introducing new dependencies, make sure to add them to the appropriate `requirements.in` file (e.g., `requirements.in` for main dependencies, `requirements-dev.in` for development dependencies). Then, run the following commands to update the corresponding `requirements.txt` file:
-
-```
-pip install pip-tools
-./scripts/pip-compile.sh
-```
-
-You can also pass one argument to `pip-compile.sh`, which will flow through to `pip-compile`. For example:
-
-```
-./scripts/pip-compile.sh --upgrade
-```
-
-### Pre-commit Hooks
-
-The project uses [pre-commit](https://pre-commit.com/) hooks to automatically format code, lint, and run other checks before committing changes. After cloning the repository, run the following command to set up the pre-commit hooks:
-
-```
-pre-commit install
-```
-
-pre-commit will then run automatically on each `git commit` command. You can use the following command line to run pre-commit manually:
-
-```
-pre-commit run --all-files
-```
-`````
-
-## File: aider/website/docs/faq.md
+## File: faq.md
 `````markdown
 ---
 nav_order: 90
@@ -10790,102 +6997,616 @@ under an
 <div style="height:80vh"></div>
 `````
 
-## File: README.md
+## File: git.md
 `````markdown
-<p align="center">
-    <a href="https://aider.chat/"><img src="https://aider.chat/assets/logo.svg" alt="Aider Logo" width="300"></a>
-</p>
+---
+parent: More info
+nav_order: 100
+description: Aider is tightly integrated with git.
+---
 
-# AI Pair Programming in Your Terminal
+# Git integration
+
+Aider works best with code that is part of a git repo.
+Aider is tightly integrated with git, which makes it easy to:
+
+  - Use the `/undo` command to instantly undo any AI changes that you don't like.
+  - Go back in the git history to review the changes that aider made to your code
+  - Manage a series of aider's changes on a git branch
+
+Aider uses git in these ways:
+
+- It asks to create a git repo if you launch it in a directory without one.
+- Whenever aider edits a file, it commits those changes with a descriptive commit message. This makes it easy to undo or review aider's changes. 
+- Aider takes special care before editing files that already have uncommitted changes (dirty files). Aider will first commit any preexisting changes with a descriptive commit message. 
+This keeps your edits separate from aider's edits, and makes sure you never lose your work if aider makes an inappropriate change.
+
+## In-chat commands
+
+Aider also allows you to use 
+[in-chat commands](/docs/usage/commands.html)
+to perform git operations:
+
+- `/diff` will show all the file changes since the last message you sent.
+- `/undo` will undo and discard the last change.
+- `/commit` to commit all dirty changes with a sensible commit message.
+- `/git` will let you run raw git commands to do more complex management of your git history.
+
+You can also manage your git history outside of aider with your preferred git tools.
+
+## Disabling git integration
+
+While it is not recommended, you can disable aider's use of git in a few ways:
+
+  - `--no-auto-commits` will stop aider from git committing each of its changes.
+  - `--no-dirty-commits` will stop aider from committing dirty files before applying its edits.
+  - `--no-git` will completely stop aider from using git on your files. You should ensure you are keeping sensible backups of the files you are working with.
+
+## Commit messages
+
+Aider sends the `--weak-model` a copy of the diffs and the chat history
+and asks it to produce a commit message.
+By default, aider creates commit messages which follow
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+You can customize the
+[commit prompt](https://github.com/Aider-AI/aider/blob/main/aider/prompts.py#L5)
+with the `--commit-prompt` option.
+You can place that on the command line, or 
+[configure it via a config file or environment variables](https://aider.chat/docs/config.html).
 
 
-Aider lets you pair program with LLMs to start a new project or build on your existing codebase. 
+## Commit attribution
 
-<p align="center">
-  <img
-    src="https://aider.chat/assets/screencast.svg"
-    alt="aider screencast"
-  >
-</p>
+Aider marks commits that it either authored or committed.
 
-<p align="center">
-  <a href="https://github.com/Aider-AI/aider/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Aider-AI/aider?style=flat-square&logo=github&color=f1c40f&labelColor=555555"/></a>
-  <a href="https://pypi.org/project/aider-chat/"><img alt="PyPI Downloads" src="https://img.shields.io/badge/📦%20Installs-1.6M-2ecc71?style=flat-square&labelColor=555555"/></a>
-  <img alt="Tokens per week" src="https://img.shields.io/badge/📈%20Tokens%2Fweek-15B-e74c3c?style=flat-square&labelColor=555555"/>
-  <a href="https://openrouter.ai/"><img alt="OpenRouter Ranking" src="https://img.shields.io/badge/🏆%20OpenRouter-Top%2020-9b59b6?style=flat-square&labelColor=555555"/></a>
-  <a href="https://aider.chat/HISTORY.html"><img alt="Singularity" src="https://img.shields.io/badge/🔄%20Singularity-72%25-3498db?style=flat-square&labelColor=555555"/></a>
-</p>
+- If aider authored the changes in a commit, they will have "(aider)" appended to the git author and git committer name metadata.
+- If aider simply committed changes (found in dirty files), the commit will have "(aider)" appended to the git committer name metadata.
 
-## Features
+You can use `--no-attribute-author` and `--no-attribute-committer` to disable
+modification of the git author and committer name fields.
 
-- 🧠 **[Cloud and local LLMs](https://aider.chat/docs/llms.html)** - Aider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.
-- 🗺️ **[Maps your codebase](https://aider.chat/docs/repomap.html)** - Aider makes a map of your entire codebase, which helps it work well in larger projects.
-- `</>` **[100+ code languages](https://aider.chat/docs/languages.html)** - Aider works with most popular programming languages: python, javascript, rust, ruby, go, cpp, php, html, css, and dozens more.
-- 🔀 **[Git integration](https://aider.chat/docs/git.html)** - Aider automatically commits changes with sensible commit messages. Use familiar git tools to easily diff, manage and undo AI changes.
-- 🖥️ **[Use in your IDE](https://aider.chat/docs/usage/watch.html)** - Use aider from within your favorite IDE or editor. Ask for changes by adding comments to your code and aider will get to work.
-- 🖼️ **[Images & web pages](https://aider.chat/docs/usage/images-urls.html)** - Add images and web pages to the chat to provide visual context, screenshots, reference docs, etc.
-- 🎤 **[Voice-to-code](https://aider.chat/docs/usage/voice.html)** - Speak with aider about your code! Request new features, test cases or bug fixes using your voice and let aider implement the changes.
-- ✅ **[Linting & testing](https://aider.chat/docs/usage/lint-test.html)** - Automatically lint and test your code every time aider makes changes. Aider can fix problems detected by your linters and test suites.
-- 📋 **[Copy/paste to web chat](https://aider.chat/docs/usage/copypaste.html)** - Work with any LLM via its web chat interface. Aider streamlines copy/pasting code context and edits back and forth with a browser.
+Additionally, you can use the following options to prefix commit messages:
 
-## Getting Started
+- `--attribute-commit-message-author`: Prefix commit messages with 'aider: ' if aider authored the changes.
+- `--attribute-commit-message-committer`: Prefix all commit messages with 'aider: ', regardless of whether aider authored the changes or not.
 
-```bash
-python -m pip install aider-install
-aider-install
+Both of these options are disabled by default, but can be useful for easily identifying changes made by aider.
+`````
 
-# Change directory into your codebase
-cd /to/your/project
+## File: install.md
+`````markdown
+---
+title: Installation
+has_children: true
+nav_order: 20
+description: How to install and get started pair programming with aider.
+---
 
-# DeepSeek
-aider --model deepseek --api-key deepseek=<key>
+# Installation
+{: .no_toc }
 
-# Claude 3.7 Sonnet
-aider --model sonnet --api-key anthropic=<key>
 
-# o3-mini
-aider --model o3-mini --api-key openai=<key>
+## Get started quickly with aider-install
+
+{% include get-started.md %}
+
+This will install aider in its own separate python environment.
+If needed, 
+aider-install will also install a separate version of python 3.12 to use with aider.
+
+Once aider is installed,
+there are also some [optional install steps](/docs/install/optional.html).
+
+See the [usage instructions](https://aider.chat/docs/usage.html) to start coding with aider.
+
+## One-liners
+
+These one-liners will install aider, along with python 3.12 if needed.
+They are based on the 
+[uv installers](https://docs.astral.sh/uv/getting-started/installation/).
+
+#### Windows
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://aider.chat/install.ps1 | iex"
 ```
 
-See the [installation instructions](https://aider.chat/docs/install.html) and [usage documentation](https://aider.chat/docs/usage.html) for more details.
+#### Mac & Linux
 
-## More Information
+Use curl to download the script and execute it with sh:
 
-### Documentation
-- [Installation Guide](https://aider.chat/docs/install.html)
-- [Usage Guide](https://aider.chat/docs/usage.html)
-- [Tutorial Videos](https://aider.chat/docs/usage/tutorials.html)
-- [Connecting to LLMs](https://aider.chat/docs/llms.html)
-- [Configuration Options](https://aider.chat/docs/config.html)
-- [Troubleshooting](https://aider.chat/docs/troubleshooting.html)
-- [FAQ](https://aider.chat/docs/faq.html)
+```bash
+curl -LsSf https://aider.chat/install.sh | sh
+```
 
-### Community & Resources
-- [LLM Leaderboards](https://aider.chat/docs/leaderboards/)
-- [GitHub Repository](https://github.com/Aider-AI/aider)
-- [Discord Community](https://discord.gg/Tv2uQnR88V)
-- [Blog](https://aider.chat/blog/)
+If your system doesn't have curl, you can use wget:
 
-## Kind Words From Users
+```bash
+wget -qO- https://aider.chat/install.sh | sh
+```
 
-- *"The best free open source AI coding assistant."* — [IndyDevDan](https://youtu.be/YALpX8oOn78)
-- *"The best AI coding assistant so far."* — [Matthew Berman](https://www.youtube.com/watch?v=df8afeb1FY8)
-- *"Aider ... has easily quadrupled my coding productivity."* — [SOLAR_FIELDS](https://news.ycombinator.com/item?id=36212100)
-- *"It's a cool workflow... Aider's ergonomics are perfect for me."* — [qup](https://news.ycombinator.com/item?id=38185326)
-- *"It's really like having your senior developer live right in your Git repo - truly amazing!"* — [rappster](https://github.com/Aider-AI/aider/issues/124)
-- *"What an amazing tool. It's incredible."* — [valyagolev](https://github.com/Aider-AI/aider/issues/6#issue-1722897858)
-- *"Aider is such an astounding thing!"* — [cgrothaus](https://github.com/Aider-AI/aider/issues/82#issuecomment-1631876700)
-- *"It was WAY faster than I would be getting off the ground and making the first few working versions."* — [Daniel Feldman](https://twitter.com/d_feldman/status/1662295077387923456)
-- *"THANK YOU for Aider! It really feels like a glimpse into the future of coding."* — [derwiki](https://news.ycombinator.com/item?id=38205643)
-- *"It's just amazing. It is freeing me to do things I felt were out my comfort zone before."* — [Dougie](https://discord.com/channels/1131200896827654144/1174002618058678323/1174084556257775656)
-- *"This project is stellar."* — [funkytaco](https://github.com/Aider-AI/aider/issues/112#issuecomment-1637429008)
-- *"Amazing project, definitely the best AI coding assistant I've used."* — [joshuavial](https://github.com/Aider-AI/aider/issues/84)
-- *"I absolutely love using Aider ... It makes software development feel so much lighter as an experience."* — [principalideal0](https://discord.com/channels/1131200896827654144/1133421607499595858/1229689636012691468)
-- *"I have been recovering from multiple shoulder surgeries ... and have used aider extensively. It has allowed me to continue productivity."* — [codeninja](https://www.reddit.com/r/OpenAI/s/nmNwkHy1zG)
-- *"I am an aider addict. I'm getting so much more work done, but in less time."* — [dandandan](https://discord.com/channels/1131200896827654144/1131200896827654149/1135913253483069470)
-- *"After wasting $100 on tokens trying to find something better, I'm back to Aider. It blows everything else out of the water hands down, there's no competition whatsoever."* — [SystemSculpt](https://discord.com/channels/1131200896827654144/1131200896827654149/1178736602797846548)
-- *"Aider is amazing, coupled with Sonnet 3.5 it's quite mind blowing."* — [Josh Dingus](https://discord.com/channels/1131200896827654144/1133060684540813372/1262374225298198548)
-- *"Hands down, this is the best AI coding assistant tool so far."* — [IndyDevDan](https://www.youtube.com/watch?v=MPYFPvxfGZs)
-- *"[Aider] changed my daily coding workflows. It's mind-blowing how a single Python application can change your life."* — [maledorak](https://discord.com/channels/1131200896827654144/1131200896827654149/1258453375620747264)
-- *"Best agent for actual dev work in existing codebases."* — [Nick Dobos](https://twitter.com/NickADobos/status/1690408967963652097?s=20)
+
+## Install with uv
+
+You can install aider with uv:
+
+```bash
+python -m pip install uv  # If you need to install uv
+uv tool install --force --python python3.12 aider-chat@latest
+```
+
+This will install uv using your existing python version 3.8-3.13,
+and use it to install aider.
+If needed, 
+uv will automatically install a separate python 3.12 to use with aider.
+
+Also see the
+[docs on other methods for installing uv itself](https://docs.astral.sh/uv/getting-started/installation/).
+
+## Install with pipx
+
+You can install aider with pipx:
+
+```bash
+python -m pip install pipx  # If you need to install pipx
+pipx install aider-chat
+```
+
+You can use pipx to install aider with python versions 3.9-3.12.
+
+Also see the
+[docs on other methods for installing pipx itself](https://pipx.pypa.io/stable/installation/).
+
+## Other install methods
+
+You can install aider with the methods described below, but one of the above
+methods is usually safer.
+
+#### Install with pip
+
+If you install with pip, you should consider
+using a 
+[virtual environment](https://docs.python.org/3/library/venv.html)
+to keep aider's dependencies separated.
+
+
+You can use pip to install aider with python versions 3.9-3.12.
+
+```bash
+python -m pip install -U --upgrade-strategy only-if-needed aider-chat
+```
+
+{% include python-m-aider.md %}
+
+#### Installing with package managers
+
+It's best to install aider using one of methods
+recommended above.
+While aider is available in a number of system package managers,
+they often install aider with incorrect dependencies.
+
+## Next steps...
+
+There are some [optional install steps](/docs/install/optional.html) you could consider.
+See the [usage instructions](https://aider.chat/docs/usage.html) to start coding with aider.
+`````
+
+## File: languages.md
+`````markdown
+---
+parent: More info
+nav_order: 200
+description: Aider supports pretty much all popular coding languages.
+---
+# Supported languages
+
+Aider should work well with most popular coding languages.
+This is because top LLMs are fluent in most mainstream languages,
+and familiar with popular libraries, packages and frameworks.
+
+Aider has specific support for linting many languages.
+By default, aider runs the built in linter any time a file is edited.
+If it finds syntax errors, aider will offer to fix them for you.
+This helps catch small code issues and quickly fix them.
+
+Aider also does code analysis to help
+the LLM navigate larger code bases by producing
+a [repository map](https://aider.chat/docs/repomap.html).
+Aider can currently produce repository maps for many popular
+mainstream languages, listed below.
+
+
+## How to add support for another language
+
+Aider should work quite well for other languages, even those
+without repo map or linter support.
+You should really try coding with aider before
+assuming it needs better support for your language.
+
+That said, if aider already has support for linting your language,
+then it should be possible to add repo map support.
+To build a repo map, aider needs the `tags.scm` file
+from the given language's tree-sitter grammar.
+If you can find and share that file in a 
+[GitHub issue](https://github.com/Aider-AI/aider/issues),
+then it may be possible to add repo map support.
+
+If aider doesn't support linting, it will be complicated to
+add linting and repo map support.
+That is because aider relies on 
+[py-tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages)
+to provide pre-packaged versions of tree-sitter
+parsers for many languages.
+
+Aider needs to be easy for users to install in many environments,
+and it is probably too complex to add dependencies on
+additional individual tree-sitter parsers.
+
+
+<!--[[[cog
+from aider.repomap import get_supported_languages_md
+cog.out(get_supported_languages_md())
+]]]-->
+
+| Language | File extension | Repo map | Linter |
+|:--------:|:--------------:|:--------:|:------:|
+| actionscript         | .as                  |          |   ✓    |
+| ada                  | .adb                 |          |   ✓    |
+| ada                  | .ads                 |          |   ✓    |
+| agda                 | .agda                |          |   ✓    |
+| arduino              | .ino                 |    ✓     |   ✓    |
+| asm                  | .asm                 |          |   ✓    |
+| asm                  | .s                   |          |   ✓    |
+| astro                | .astro               |          |   ✓    |
+| bash                 | .bash                |          |   ✓    |
+| bash                 | .sh                  |          |   ✓    |
+| bash                 | .zsh                 |          |   ✓    |
+| beancount            | .bean                |          |   ✓    |
+| bibtex               | .bib                 |          |   ✓    |
+| bicep                | .bicep               |          |   ✓    |
+| bitbake              | .bb                  |          |   ✓    |
+| bitbake              | .bbappend            |          |   ✓    |
+| bitbake              | .bbclass             |          |   ✓    |
+| c                    | .c                   |    ✓     |   ✓    |
+| c                    | .h                   |    ✓     |   ✓    |
+| cairo                | .cairo               |          |   ✓    |
+| capnp                | .capnp               |          |   ✓    |
+| chatito              | .chatito             |    ✓     |   ✓    |
+| clarity              | .clar                |          |   ✓    |
+| clojure              | .clj                 |          |   ✓    |
+| clojure              | .cljc                |          |   ✓    |
+| clojure              | .cljs                |          |   ✓    |
+| clojure              | .edn                 |          |   ✓    |
+| cmake                | .cmake               |          |   ✓    |
+| cmake                | CMakeLists.txt       |          |   ✓    |
+| commonlisp           | .cl                  |    ✓     |   ✓    |
+| commonlisp           | .lisp                |    ✓     |   ✓    |
+| cpon                 | .cpon                |          |   ✓    |
+| cpp                  | .cc                  |    ✓     |   ✓    |
+| cpp                  | .cpp                 |    ✓     |   ✓    |
+| cpp                  | .cxx                 |    ✓     |   ✓    |
+| cpp                  | .h++                 |    ✓     |   ✓    |
+| cpp                  | .hpp                 |    ✓     |   ✓    |
+| cpp                  | .hxx                 |    ✓     |   ✓    |
+| csharp               | .cs                  |    ✓     |   ✓    |
+| css                  | .css                 |          |   ✓    |
+| csv                  | .csv                 |          |   ✓    |
+| cuda                 | .cu                  |          |   ✓    |
+| cuda                 | .cuh                 |          |   ✓    |
+| d                    | .d                   |    ✓     |   ✓    |
+| dart                 | .dart                |    ✓     |   ✓    |
+| dockerfile           | Dockerfile           |          |   ✓    |
+| dtd                  | .dtd                 |          |   ✓    |
+| elisp                | .el                  |    ✓     |   ✓    |
+| elixir               | .ex                  |    ✓     |   ✓    |
+| elixir               | .exs                 |    ✓     |   ✓    |
+| elm                  | .elm                 |    ✓     |   ✓    |
+| erlang               | .erl                 |          |   ✓    |
+| erlang               | .hrl                 |          |   ✓    |
+| fennel               | .fnl                 |          |   ✓    |
+| firrtl               | .fir                 |          |   ✓    |
+| fish                 | .fish                |          |   ✓    |
+| fortran              | .f                   |          |   ✓    |
+| fortran              | .f03                 |          |   ✓    |
+| fortran              | .f08                 |          |   ✓    |
+| fortran              | .f90                 |          |   ✓    |
+| fortran              | .f95                 |          |   ✓    |
+| func                 | .fc                  |          |   ✓    |
+| gdscript             | .gd                  |          |   ✓    |
+| gitattributes        | .gitattributes       |          |   ✓    |
+| gitcommit            | .gitcommit           |          |   ✓    |
+| gitignore            | .gitignore           |          |   ✓    |
+| gleam                | .gleam               |    ✓     |   ✓    |
+| glsl                 | .frag                |          |   ✓    |
+| glsl                 | .glsl                |          |   ✓    |
+| glsl                 | .vert                |          |   ✓    |
+| gn                   | .gn                  |          |   ✓    |
+| gn                   | .gni                 |          |   ✓    |
+| go                   | .go                  |    ✓     |   ✓    |
+| gomod                | go.mod               |          |   ✓    |
+| gosum                | go.sum               |          |   ✓    |
+| groovy               | .groovy              |          |   ✓    |
+| gstlaunch            | .launch              |          |   ✓    |
+| hack                 | .hack                |          |   ✓    |
+| hare                 | .ha                  |          |   ✓    |
+| haskell              | .hs                  |          |   ✓    |
+| haxe                 | .hx                  |          |   ✓    |
+| hcl                  | .hcl                 |    ✓     |   ✓    |
+| hcl                  | .tf                  |    ✓     |   ✓    |
+| hcl                  | .tfvars              |    ✓     |   ✓    |
+| heex                 | .heex                |          |   ✓    |
+| hlsl                 | .hlsl                |          |   ✓    |
+| html                 | .htm                 |          |   ✓    |
+| html                 | .html                |          |   ✓    |
+| hyprlang             | .hypr                |          |   ✓    |
+| ispc                 | .ispc                |          |   ✓    |
+| janet                | .janet               |          |   ✓    |
+| java                 | .java                |    ✓     |   ✓    |
+| javascript           | .js                  |    ✓     |   ✓    |
+| javascript           | .jsx                 |    ✓     |   ✓    |
+| javascript           | .mjs                 |    ✓     |   ✓    |
+| jsdoc                | .jsdoc               |          |   ✓    |
+| json                 | .json                |          |   ✓    |
+| jsonnet              | .jsonnet             |          |   ✓    |
+| jsonnet              | .libsonnet           |          |   ✓    |
+| julia                | .jl                  |          |   ✓    |
+| kconfig              | Kconfig              |          |   ✓    |
+| kdl                  | .kdl                 |          |   ✓    |
+| kotlin               | .kt                  |    ✓     |   ✓    |
+| kotlin               | .kts                 |    ✓     |   ✓    |
+| latex                | .cls                 |          |   ✓    |
+| latex                | .sty                 |          |   ✓    |
+| latex                | .tex                 |          |   ✓    |
+| linkerscript         | .ld                  |          |   ✓    |
+| llvm                 | .ll                  |          |   ✓    |
+| lua                  | .lua                 |    ✓     |   ✓    |
+| luadoc               | .luadoc              |          |   ✓    |
+| luap                 | .luap                |          |   ✓    |
+| luau                 | .luau                |          |   ✓    |
+| magik                | .magik               |          |   ✓    |
+| make                 | .mk                  |          |   ✓    |
+| make                 | Makefile             |          |   ✓    |
+| markdown             | .markdown            |          |   ✓    |
+| markdown             | .md                  |          |   ✓    |
+| matlab               | .m                   |          |   ✓    |
+| matlab               | .mat                 |          |   ✓    |
+| mermaid              | .mermaid             |          |   ✓    |
+| meson                | meson.build          |          |   ✓    |
+| ninja                | .ninja               |          |   ✓    |
+| nix                  | .nix                 |          |   ✓    |
+| nqc                  | .nqc                 |          |   ✓    |
+| objc                 | .mm                  |          |   ✓    |
+| odin                 | .odin                |          |   ✓    |
+| org                  | .org                 |          |   ✓    |
+| pascal               | .pas                 |          |   ✓    |
+| pascal               | .pp                  |          |   ✓    |
+| pem                  | .pem                 |          |   ✓    |
+| perl                 | .pl                  |          |   ✓    |
+| perl                 | .pm                  |          |   ✓    |
+| pgn                  | .pgn                 |          |   ✓    |
+| php                  | .php                 |    ✓     |   ✓    |
+| po                   | .po                  |          |   ✓    |
+| po                   | .pot                 |          |   ✓    |
+| pony                 | .pony                |    ✓     |   ✓    |
+| powershell           | .ps1                 |          |   ✓    |
+| powershell           | .psm1                |          |   ✓    |
+| printf               | .printf              |          |   ✓    |
+| prisma               | .prisma              |          |   ✓    |
+| properties           | .properties          |    ✓     |   ✓    |
+| proto                | .proto               |          |   ✓    |
+| psv                  | .psv                 |          |   ✓    |
+| purescript           | .purs                |          |   ✓    |
+| pymanifest           | MANIFEST.in          |          |   ✓    |
+| python               | .py                  |    ✓     |   ✓    |
+| qmldir               | qmldir               |          |   ✓    |
+| qmljs                | .qml                 |          |   ✓    |
+| r                    | .R                   |    ✓     |   ✓    |
+| r                    | .r                   |    ✓     |   ✓    |
+| racket               | .rkt                 |    ✓     |   ✓    |
+| re2c                 | .re2c                |          |   ✓    |
+| readline             | .inputrc             |          |   ✓    |
+| requirements         | requirements.txt     |          |   ✓    |
+| ron                  | .ron                 |          |   ✓    |
+| rst                  | .rst                 |          |   ✓    |
+| ruby                 | .rb                  |    ✓     |   ✓    |
+| rust                 | .rs                  |    ✓     |   ✓    |
+| scala                | .sc                  |          |   ✓    |
+| scala                | .scala               |          |   ✓    |
+| scheme               | .scm                 |          |   ✓    |
+| scheme               | .ss                  |          |   ✓    |
+| scss                 | .scss                |          |   ✓    |
+| smali                | .smali               |          |   ✓    |
+| smithy               | .smithy              |          |   ✓    |
+| solidity             | .sol                 |    ✓     |   ✓    |
+| sparql               | .rq                  |          |   ✓    |
+| sql                  | .sql                 |          |   ✓    |
+| squirrel             | .nut                 |          |   ✓    |
+| starlark             | .bzl                 |          |   ✓    |
+| starlark             | BUILD                |          |   ✓    |
+| starlark             | WORKSPACE            |          |   ✓    |
+| svelte               | .svelte              |          |   ✓    |
+| swift                | .swift               |    ✓     |   ✓    |
+| tablegen             | .td                  |          |   ✓    |
+| tcl                  | .tcl                 |          |   ✓    |
+| thrift               | .thrift              |          |   ✓    |
+| toml                 | .toml                |          |   ✓    |
+| tsv                  | .tsv                 |          |   ✓    |
+| twig                 | .twig                |          |   ✓    |
+| typescript           | .ts                  |    ✓     |   ✓    |
+| typescript           | .tsx                 |    ✓     |   ✓    |
+| typst                | .typ                 |          |   ✓    |
+| udev                 | .rules               |    ✓     |   ✓    |
+| ungrammar            | .ungram              |          |   ✓    |
+| uxntal               | .tal                 |          |   ✓    |
+| verilog              | .sv                  |          |   ✓    |
+| verilog              | .v                   |          |   ✓    |
+| vhdl                 | .vhd                 |          |   ✓    |
+| vhdl                 | .vhdl                |          |   ✓    |
+| vim                  | .vim                 |          |   ✓    |
+| vim                  | .vimrc               |          |   ✓    |
+| vue                  | .vue                 |          |   ✓    |
+| wgsl                 | .wgsl                |          |   ✓    |
+| xcompose             | .XCompose            |          |   ✓    |
+| xml                  | .svg                 |          |   ✓    |
+| xml                  | .xml                 |          |   ✓    |
+| xml                  | .xsl                 |          |   ✓    |
+| yuck                 | .yuck                |          |   ✓    |
+| zig                  | .zig                 |          |   ✓    |
+
+<!--[[[end]]]-->
+`````
+
+## File: llms.md
+`````markdown
+---
+title: Connecting to LLMs
+nav_order: 40
+has_children: true
+description: Aider can connect to most LLMs for AI pair programming.
+---
+
+# Aider can connect to most LLMs
+{: .no_toc }
+
+[![connecting to many LLMs](/assets/llms.jpg)](https://aider.chat/assets/llms.jpg)
+
+
+## Best models
+{: .no_toc }
+
+Aider works best with these models, which are skilled at editing code:
+
+- [DeepSeek R1 and V3](/docs/llms/deepseek.html)
+- [Claude 3.7 Sonnet](/docs/llms/anthropic.html)
+- [OpenAI o1, o3-mini and GPT-4o](/docs/llms/openai.html)
+
+
+## Free models
+{: .no_toc }
+
+Aider works with a number of **free** API providers:
+
+- Google's [Gemini 1.5 Pro](/docs/llms/gemini.html) works with aider, with
+code editing capabilities similar to GPT-3.5.
+- You can use [Llama 3 70B on Groq](/docs/llms/groq.html) which is comparable to GPT-3.5 in code editing performance.
+- Cohere also offers free API access to their [Command-R+ model](/docs/llms/cohere.html), which works with aider as a *very basic* coding assistant.
+
+## Local models
+{: .no_toc }
+
+Aider can work also with local models, for example using [Ollama](/docs/llms/ollama.html).
+It can also access
+local models that provide an
+[Open AI compatible API](/docs/llms/openai-compat.html).
+
+## Use a capable model
+{: .no_toc }
+
+Check
+[Aider's LLM leaderboards](https://aider.chat/docs/leaderboards/)
+to see which models work best with aider.
+
+Be aware that aider may not work well with less capable models.
+If you see the model returning code, but aider isn't able to edit your files
+and commit the changes...
+this is usually because the model isn't capable of properly
+returning "code edits".
+Models weaker than GPT 3.5 may have problems working well with aider.
+`````
+
+## File: usage.md
+`````markdown
+---
+nav_order: 30
+has_children: true
+description: How to use aider to pair program with AI and edit code in your local git repo.
+---
+
+# Usage
+
+Run `aider` with the source code files you want to edit.
+These files will be "added to the chat session", so that
+aider can see their
+contents and edit them for you.
+They can be existing files or the name of files you want
+aider to create for you.
+
+```
+aider <file1> <file2> ...
+```
+
+At the aider `>` prompt, ask for code changes and aider
+will edit those files to accomplish your request.
+
+
+```
+$ aider factorial.py
+
+Aider v0.37.1-dev
+Models: gpt-4o with diff edit format, weak model gpt-3.5-turbo
+Git repo: .git with 258 files
+Repo-map: using 1024 tokens
+Use /help to see in-chat commands, run with --help to see cmd line args
+───────────────────────────────────────────────────────────────────────
+> Make a program that asks for a number and prints its factorial
+
+...
+```
+
+{% include help-tip.md %}
+
+## Adding files
+
+To edit files, you need to "add them to the chat".
+Do this
+by naming them on the aider command line.
+Or, you can use the in-chat
+`/add` command to add files.
+
+
+Only add the files that need to be edited for your task.
+Don't add a bunch of extra files.
+If you add too many files, the LLM can get overwhelmed
+and confused (and it costs more tokens).
+Aider will automatically
+pull in content from related files so that it can
+[understand the rest of your code base](https://aider.chat/docs/repomap.html).
+
+You can use aider without adding any files,
+and it will try to figure out which files need to be edited based
+on your requests.
+
+{: .tip }
+You'll get the best results if you think about which files need to be
+edited. Add **just** those files to the chat. Aider will include
+relevant context from the rest of your repo.
+
+## LLMs
+
+{% include works-best.md %}
+
+```
+# o3-mini
+$ aider --model o3-mini --api-key openai=<key>
+
+# Claude 3.7 Sonnet
+$ aider --model sonnet --api-key anthropic=<key>
+```
+
+Or you can run `aider --model XXX` to launch aider with
+another model.
+During your chat you can switch models with the in-chat
+`/model` command.
+
+## Making changes
+
+Ask aider to make changes to your code.
+It will show you some diffs of the changes it is making to
+complete you request.
+[Aider will git commit all of its changes](/docs/git.html),
+so they are easy to track and undo.
+
+You can always use the `/undo` command to undo AI changes that you don't
+like.
 `````
