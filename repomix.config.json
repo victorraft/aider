@@ -1,0 +1,68 @@
+{
+  "output": {
+    "filePath": "aider-documentation.md",
+    "style": "markdown",
+    "parsableStyle": false,
+    "fileSummary": true,
+    "directoryStructure": true,
+    "removeComments": false,
+    "removeEmptyLines": true,
+    "compress": true,
+    "topFilesLength": 10,
+    "showLineNumbers": false,
+    "copyToClipboard": false
+  },
+  "include": [
+    "aider/website/docs/**/*.md",
+    "aider/website/docs/**/*.rst",
+    "aider/website/docs/**/*.txt",
+    "**/README.md",
+    "**/CHANGELOG.md",
+    "**/CONTRIBUTING.md"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/*.svg",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.png",
+      "**/*.gif",
+      "**/LICENSE*",
+      "**/node_modules/**",
+      "**/venv/**",
+      "**/.git/**",
+      "**/tests/**",
+      "**/test/**",
+      "**/*_test.py",
+      "**/*_tests.py",
+      "**/test_*.py",
+      "aider/website/**/*.html",
+      "aider/website/**/*.yml",
+      "aider/website/**/*.json",
+      "aider/website/**/*.css",
+      "aider/website/**/*.js",
+      "aider/website/**/*.scss",
+      "aider/website/**/*.ps1",
+      "aider/website/**/*.sh",
+      "aider/website/_*",
+      "aider/website/assets/**",
+      "aider/website/blog/**",
+      "aider/website/_posts/**",
+      "aider/website/_sass/**",
+      "aider/website/_includes/**",
+      "aider/website/_layouts/**",
+      "aider/website/_data/**",
+      "aider/website/examples/**",
+      "aider/website/share/**",
+      "**/HISTORY.md"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": true
+  },
+  "tokenCount": {
+    "encoding": "o200k_base"
+  }
+}
